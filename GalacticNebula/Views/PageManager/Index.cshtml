@@ -1,0 +1,668 @@
+﻿@{
+    ViewBag.Title = "Page";
+}
+
+
+    <style scoped>
+                #organizer {
+                    margin: 0 auto;
+                    padding: 10px 0 0 0;
+                }
+                #bottom {
+                }
+                .demo-section {
+                    width: 200px;
+                }
+
+                #treeview .k-sprite {
+                    background-image: url("../Images/treeview/coloricons-sprite.png");
+                }
+
+                .rootfolder { background-position: 0 0; }
+                .folder { background-position: 0 -16px; }
+                .pdf { background-position: 0 -32px; }
+                .html { background-position: 0 -48px; }
+                .image { background-position: 0 -64px; }
+
+                .weather {
+                   margin-bottom:10px;
+                }
+                .inputbutton {
+                height:30px;
+                width:60px;
+                color:white;
+                background-color:#77c45c;
+                border-radius:5px;
+                }
+                .inputtextbox {
+                height:25px;
+                width:200px;
+                border:solid 1px #ccc;
+                border-radius:5px;
+                }
+                .textarea {
+                border-radius:3px;
+                border:solid 1px #ccc;
+                }
+                 .spans {
+                     cursor:pointer;
+                 }
+                 .layout {
+                 margin:10px 10px 10px 10px; 
+                 padding:10px 10px 10px 10px; 
+                 border:solid #e5d9d9 1px; 
+                 width:140px;
+                 text-align:center;
+                 display:inline-table;
+                 }
+                .tablet {
+                margin:5px 5px 5px 5px; 
+                padding:5px 5px 5px 5px; 
+                border:solid #e5d9d9 1px; 
+                width:120px;
+                text-align:center; 
+                display:inline-table;
+                }
+                .mobile {
+                margin:10px 20px 10px 10px; 
+                padding:10px 20px 10px 20px; 
+                border:solid #e5d9d9 1px;
+                width:120px;
+                text-align:center; 
+                display:inline-table;
+                }
+   </style>  
+    
+   <script>
+       var idnode;
+       var lang_id=1;
+       $(document).ready(function () {
+
+           var ViewModel = function (namepage, name, title, keyword, description, urlrewrite, URLTarget, bnewwindows, disableAccess) {
+               this.namepage = ko.observable(namepage);
+               this.name = ko.observable(name);
+               this.title = ko.observable(title);
+               this.keyword = ko.observable(keyword);
+               this.description = ko.observable(description);
+               this.urlrewrite = ko.observable(urlrewrite);
+               this.URLTarget = ko.observable(URLTarget);
+               this.bnewwindows = ko.observable(bnewwindows);
+               this.disableAccess = ko.observable(disableAccess);
+           };
+
+
+            //menu
+            $("#panelbar").kendoPanelBar({
+                expandMode: "single"
+            });
+
+            //treeview
+            var serviceRoot = "http://localhost:59611/pageManager";
+            homogeneous = new kendo.data.HierarchicalDataSource({
+                transport: {
+                    read: {
+                        url: serviceRoot + "/Listdata",
+                        dataType: "json"
+                    }
+                },
+                schema: {
+                    model: {
+                        id: "idpage",
+                        hasChildren: "haschild"
+                    }
+                }
+            });
+
+            var treeview = $("#treeview").kendoTreeView({
+                dataSource: homogeneous,
+                dataTextField: "namepage",
+                select: onSelect,
+                dragAndDrop: true,
+                dragstart: onDragStart,
+                drop: onDrop,
+                change: onChange,
+                loadOnDemand: true
+            }).data("kendoTreeView");
+
+
+            function onDragStart(e) {
+                var data = $('#treeview').data('kendoTreeView').dataItem(e.sourceNode);
+                idnode = data.id;
+                if (idnode == 1) {
+                    toastr.error("ไม่สามารถเคลื่อนย้าย Node ได้", "Warning!!");
+                }
+            }
+
+            function onDrop(e) {
+                var data = $('#treeview').data('kendoTreeView');
+                var node, mode_change, id_par;
+                if (e.dropPosition == 'over') {
+                    node = data.dataItem(e.destinationNode);
+                    id_par = node.id;
+                    mode_change = "over";
+                }
+                else if (e.dropPosition == 'after') {
+                    node = data.dataItem(e.destinationNode);
+                    id_par = node.id;
+                    mode_change = "after";
+                }
+                else if (e.dropPosition == 'before') {
+                    node = data.dataItem(e.destinationNode);
+                    id_par = node.id;
+                    mode_change = "before";
+                }
+                $.ajax({
+                    type: "POST",
+                    url: "/PageManager/changeMode",
+                    data: { mode_change: mode_change, id_parent: id_par, id_node: idnode },
+                    success: function (result) {
+                        if (result == "Success") {
+
+                        } else {
+                            toastr.error("ไม่สามารถเคลื่อนย้าย Node ได้", "Warning!!");
+                            treeview.dataSource.read();
+                        }
+                    },
+                    error: function (req, status, error) {
+                        toastr.error("ไม่สามารถเคลื่อนย้าย Node ได้", "Warning!!");
+                    }
+                });
+
+            }
+
+            function onSelect(e) {
+                if (e == null) return "NULL";
+                var data = $('#treeview').data('kendoTreeView').dataItem(e.node);
+                idnode = data.id;
+
+                $.ajax({
+                    type: "POST",
+                    url: "/PageManager/getNodeData",
+                    data: {
+                        id_node: idnode
+                    },
+                    success: function (result) {
+                        if (result != null) {
+                            var JSONObject = result;
+                            console.log(JSONObject);
+                            if (JSONObject[0].LangConfigData_idLangConfigData == 1)
+                            {
+                                document.getElementById('imglang').src = "/Images/icon/thailandflag.png";
+                            }
+                            else if (JSONObject[0].LangConfigData_idLangConfigData == 2)
+                            {
+                                document.getElementById('imglang').src = "/Images/icon/england.png";
+                            }
+                            ko.applyBindings(new ViewModel(JSONObject[0].namepage, JSONObject[0].name, JSONObject[0].title, JSONObject[0].keyword, JSONObject[0].description, JSONObject[0].urlrewrite, JSONObject[0].URLTarget, JSONObject[0].bnewwindows, JSONObject[0].disableAccess));
+
+                        } else {
+                            alert("Can't Show data");
+                        }
+                    },
+                    error: function (req, status, error) {
+                        alert("Can't Show data");
+                    }
+                });
+            }
+
+            function onChange() {
+                //tab
+                if (idnode != 1) {
+                    $("#tabstrip").hide();
+                    $("#tabstrip").show(1000);
+                    $("#tabstrip").kendoTabStrip({
+                        animation: {
+                            open: {
+                                effects: "fadeIn"
+                            }
+                        }
+                    });
+                }
+                else {
+                    $("#tabstrip").hide();
+                }
+            }
+            //tab
+            $("#tabstrip").hide();
+
+            //dropdown
+            var data = [
+            { img: "<img src=\"~/Images/icon/icon_th.gif\" />", text: "เว็บไซต์ภาษาไทย", value: "thai" },
+            { img: "<img src=\"~/Images/icon/icon_th.gif\" />", text: "เว็บไซต์ภาษาอังกฤษ", value: "eng" },
+            { img: "<img src=\"~/Images/icon/icon_th.gif\" />", text: "เว็บไซต์ภาษาจีน", value: "china" }
+            ];
+            $("#titles").kendoDropDownList({
+                dataTextField: "text",
+                dataValueField: "value",
+                dataImgField: "img",
+                dataSource: data,
+                select: onSelectDropdown
+            });
+            function onSelectDropdown(e) {
+                var dataItem = this.dataItem(e.item.index());
+                $("#seoThai").show();
+                if (dataItem.value == 'thai') {
+                    lang_id = 1;   
+                } else if (dataItem.value == 'eng') {
+                    lang_id = 2;
+                } else {
+                    lang_id = 3;
+                }
+            };
+
+           //window add
+            $("#window").hide();
+            $("#window").kendoWindow({
+                width: "450px",
+                height: "150px",
+                actions: ["Close"],
+                title: "Add new Node"
+            });
+            var kendoWindow = $("#window").data("kendoWindow");
+            kendoWindow.center();
+
+            $("#addnodebtn").click(function () {
+                kendoWindow.open();
+
+            });
+
+            $("#windowlanguage").hide();
+            $("#language").click(function () {
+                $("#windowlanguage").show();
+            });
+
+            $("#thai").click(function () {
+                lang_id = 1;
+                document.getElementById('imglang').src = "/Images/icon/thailandflag.png";
+                $("#windowlanguage").hide();
+            });
+
+            $("#english").click(function () {
+                lang_id = 2;
+                document.getElementById('imglang').src = "/Images/icon/england.png";
+                $("#windowlanguage").hide();
+            });
+
+
+           //addbtn
+            $("#addnodesbt").click(function () {
+
+                //var selectedNode = treeview.select();
+                //console.log(selectedNode);
+                //var itemData = { idpage: '30', namepage: 'sss' };
+                //if (selectedNode.length == 0) {
+                //    selectedNode = null;
+                //}
+                //treeview.append(itemData, selectedNode);
+                //treeview.expand(selectedNode);
+                //kendoWindow.close();
+
+                var Name = $("#nameNode").val();
+
+                $.ajax({
+                    type: "POST",
+                    url: "/PageManager/AddPage",
+                    data: {
+                        id_node: idnode, namepage: Name, lang_id: lang_id
+                    },
+                    success: function (result) {
+                        console.log(result)
+                        var selectedNode = treeview.select();
+                        var itemData = { idpage: result, namepage: $("#nameNode").val() };
+                        if (selectedNode.length == 0) {
+                            selectedNode = null;
+                        }
+                        treeview.append(itemData, selectedNode);
+                        treeview.expand(selectedNode);
+                        kendoWindow.close();
+                    },
+                    error: function (req, status, error) {
+                        alert("Can't Show data");
+                    }
+                });
+            });
+
+           //btn update
+            $("#btnConfirm").click(function () {
+                var NamePage = $("#namepage").val();
+
+                var Name = $("#name").val();
+                var Title = $("#title").val();
+                var Keyword = $("#keyword").val();
+                var Descript = $("#descript").val();
+                var Urlrewrite = $("#urlrewrite").val();
+                var Urlto = $("#urlto").val();
+
+                var checkwinop = $("#newWindows").prop('checked');
+                var checkdisacess = $("#disAccess").prop('checked');
+
+                $.ajax({
+                    type: "POST",
+                    url: "/PageManager/EditPage",
+                    data: {
+                        namepage: NamePage, id_node: idnode, name: Name, title: Title, keyword: Keyword, descript: Descript, urlrewrite: Urlrewrite, urlto: Urlto, checkwinop: checkwinop, checkdisaccess: checkdisacess, lang_id: lang_id
+                    },
+                    success: function (result) {
+                        var selectedNode = treeview.select();
+                        treeview.text(selectedNode, NamePage);
+
+                    },
+                    error: function (req, status, error) {
+                        alert("Can't Show data");
+                    }
+                });
+            });
+
+           //btn delnode
+            $("#delnodebtn").click(function () {  
+                $.ajax({
+                    type: "POST",
+                    url: "/PageManager/DeletePage",
+                    data: {
+                       id_node: idnode
+                    },
+                    success: function (result) {
+                        if (result == "Success") {
+                            var selectedNode = treeview.select();
+                            treeview.remove(selectedNode);
+                            $("#tabstrip").hide();
+                        }
+                        else {
+                            alert("Can't Delete Node");
+                        }
+
+                    },
+                    error: function (req, status, error) {
+                        alert("Can't Show data");
+                    }
+                });
+            });  
+        
+       });
+
+       function updateLayout(id_layout, laytype) {
+
+           $.ajax({
+               type: "POST",
+               url: "/PageManager/updateLayout",
+               data: {
+                   id_layout: id_layout,type_layout: laytype, id_node: idnode
+               },
+               success: function (result) {
+
+               },
+               error: function (req, status, error) {
+                   alert("Can't Show data");
+               }
+           });
+           
+       }
+
+    </script>
+
+<div id="window">
+<div id="tickets">
+<div id="example" class="k-content">
+    <div style="text-align:center">
+        <br />
+    <input class="inputtextbox" type="text" value="" placeholder=" new Node" id="nameNode"/>
+    <button class="k-button" id="addnodesbt" type="submit">Submit</button>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="bg">
+    <div id="bgLeft">
+        <div id="titleMenu">
+            <div>เมนู</div>
+        </div>
+            <div id="organizer">
+               <ul id="panelbar">
+         
+                        <li>@Html.ActionLink("Theme", "Theme", "Home")</li>                      
+                        <li>@Html.ActionLink("Page", "Page", "Home")</li>
+                        <li>@Html.ActionLink("Content", "Content", "Home")</li>
+                        <li>@Html.ActionLink("E-Commerce", "Ecommerce", "Home")</li>
+                        <li>@Html.ActionLink("Preview", "Preview", "Home")</li>
+                        <li>@Html.ActionLink("Social Integrated", "Socialintegrated", "Home")</li>
+                        <li>
+                            Administrator
+                            <ul>
+                                <li>@Html.ActionLink("Submenu 1", "Index", "Home")</li>
+                                <li>@Html.ActionLink("Submenu 2", "About", "Home")</li>
+                                <li>@Html.ActionLink("Submenu 3", "Contact", "Home")</li>
+                                <li>@Html.ActionLink("Submenu 4", "Slide", "Home")</li>
+                                <li>@Html.ActionLink("Submenu 5", "Slide2", "Home")</li>
+                            </ul>
+                        </li>
+            </ul> 
+         </div>
+      </div>
+
+    <div id="bgRight">
+        <div id="titleRightMenu">
+            <div style="font-weight:bold; padding:5px 0 0 10px; display:inline-table;">โครงสร้างเว็บไซต์</div>
+               <input id="titles" style="float:right;"/>
+        </div>
+            <button class="k-button" style="float:left;" id="addnodebtn">Add Node</button>&nbsp;
+            <button class="k-button" id="delnodebtn">Delete Node</button>
+        <br /><br />
+            <div style=" border:solid #ccc 1px; padding:10px 10px 10px 10px;">
+                <div style=" border:solid #ccc 1px; width:160px; padding:10px 10px 10px 10px; display:inline-table;">
+
+                        <div id="treeview" class="demo-section"></div>
+
+                </div>
+                
+                        <div id="tabstrip" style="width:67%;  display:inline-table; margin-left:10px; /*float:right;*/">
+                            <ul>
+                                <li class="k-state-active">SEO</li>
+                                <li>ตั้งค่าเพิ่มเติม</li>
+                                <li>Websilt</li>
+                                <li>Tablet</li>
+                                <li>Mobile</li>
+                            </ul>
+
+                            <div>
+                            <div id="seoThai">
+                                <div class="weather"style=" width:auto; display:inline-table;">
+                                    <table cellpadding="5" cellspacing="2" border="0">
+                                      <tbody>
+                                        <tr>
+                                          <td rowspan="2" align="right">&nbsp;</td>
+                                          <td>Language</td>
+                                        </tr>
+                                        <tr>
+                                          <td><div id="language"><a href="#"><img id="imglang" src="~/Images/icon/thailandflag.png" /></a></div>
+                                              
+                                              <div id="windowlanguage" style="position:relative;width:150px;height:40px;border:solid 1px">
+                                                <div style="float:left" id="thai"><a href="#"><img src="~/Images/icon/thailandflag.png" height="32"/></a></div>&nbsp;
+                                                <div style="float:left" id="english"><a href="#"><img src="~/Images/icon/england.png" height="32"/></a></div>
+                                              </div>
+
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td rowspan="2" align="right">&nbsp;</td>
+                                          <td>ชื่อเพจ</td>
+                                        </tr>
+                                        <tr>
+                                          <td><input class="inputtextbox" id="namepage" type="text" value="" data-bind="value: namepage" /></td>
+                                        </tr>
+                                        <tr>
+                                          <td rowspan="2" align="right">&nbsp;</td>
+                                          <td>ชื่ออ้างอิงเพจ</td>
+                                        </tr>
+                                          <tr>
+                                          <td><input class="inputtextbox" id="name" type="text" value="" data-bind="value: name" /></td>
+                                        </tr>
+                                        <tr>
+                                          <td rowspan="2" align="right">&nbsp;</td>
+                                          <td>ชื่อหัวข้อของเพจ</td>
+                                        </tr>
+                                        <tr>
+                                          <td><input class="inputtextbox" name="Title" id="title" type="text" value=" หน้าแรก" data-bind="value: title" /></td>
+                                        </tr>
+                                        <tr>
+                                          <td rowspan="2" align="right">&nbsp;</td>
+                                          <td>คำค้นหาใช้ ,เพื่อแยกคำ</td>
+                                        </tr>
+                                        <tr>
+                                          <td><input class="inputtextbox" name="Keyword" id="keyword" type="text" data-bind="value: keyword" /></td>
+                                        </tr>
+                                          <tr>
+                                          <td rowspan="2" align="right">&nbsp;</td>
+                                          <td>คำอธิบายหน้า</td>
+                                        </tr>
+                                        <tr>
+                                          <td><textarea class="textarea" name="Discription" id="descript" rows="10" cols="50" data-bind="value: description"></textarea></td>
+                                        </tr>
+                                        <tr>
+                                          <td rowspan="4" align="right">&nbsp;</td>
+                                          <td>URL Rewrite :</td>
+                                        </tr>
+                                        <tr>
+                                          <td><input class="inputtextbox" name="Rewrite" id="urlrewrite" type="text" data-bind="value: urlrewrite" /></td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                           </div>
+
+                            <div>
+                                <div class="weather">
+                                    <table cellpadding="5" cellspacing="2" border="0">
+                                      <tbody>
+                                        <tr>
+                                          <td align="right">&nbsp;</td>
+                                          <td>URL ไปยังเพจอื่น</td>
+                                        </tr>
+                                        <tr>
+                                          <td align="right">&nbsp;</td>
+                                          <td><input class="inputtextbox" name="Url" type="text" id="urlto" value=" http://" data-bind="value: URLTarget"/></td>
+                                        </tr>
+                                        <tr>
+                                          <td align="right"></td>
+                                          <td>
+                                            <input type="checkbox" id="newWindows" data-bind="checked: bnewwindows"/>เปิดหน้าต่างใหม่ เมื่อมีการเรียกใช้
+                                            <br />
+                                            <input type="checkbox" id="disAccess" data-bind="checked: disableAccess"/>ปิดหน้านี้ ไม่ให้เข้าถึง ทุกกรณี
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="right"></td>
+                                          <td><span disabled="disabled">
+                                            <input id="chkUser" type="checkbox" name="chkUser" disabled="disabled" onclick="Disable();" />
+                                            เพจสำหรับสมาชิก เท่านั้น
+                                            </span>
+                                            <br />
+                                            <span disabled="disabled">
+                                              <input id="chkMenu" type="checkbox" name="chkMenu" checked="checked" disabled="disabled" />
+                                              เพจนี้แสดงผลในเมนู
+                                            </span></td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                              <div>
+                                <div class="weather">
+                                      <div style="margin:auto;">
+                                        <div class="layout" onclick="updateLayout(1,'web')">
+                                            <a href="#"><img src="~/Images/layout/default.jpg" width="150"/></a><br />
+                                            มาตรฐาน <br /> 
+                                            100%
+                                            
+                                        </div>
+                                        <div class="layout" onclick="updateLayout(2,'web')">
+                                            <a href="#"><img src="~/Images/layout/midle.jpg" width="150"/></a><br />
+                                            2แถว <br />
+                                            50% + 50%
+                                        </div>
+                                        <div class="layout" onclick="updateLayout(3,'web')">
+                                            <a href="#"><img src="~/Images/layout/left.jpg" width="150"/></a><br />
+                                            2แถว <br /> 
+                                            25% + 75%
+                                        </div>
+                                        <div class="layout" onclick="updateLayout(4,'web')">
+                                            <a href="#"><img src="~/Images/layout/right.jpg" width="150"/></a><br />
+                                            2แถว <br /> 
+                                            75% + 25%
+                                        </div>
+                                         <div class="layout" onclick="updateLayout(5,'web')">
+                                            <a href="#"><img src="~/Images/layout/left_menu.jpg" width="150"/></a><br />
+                                            2แถว <br /> 
+                                            เมนูซ้าย
+                                        </div>
+                                         <div class="layout" onclick="updateLayout(6,'web')">
+                                            <a href="#"><img src="~/Images/layout/right_menu.jpg" width="150"/></a><br />
+                                             2แถว <br /> 
+                                            เมนูขวา
+                                        </div>
+                                         <div class="layout" onclick="updateLayout(7,'web')">
+                                            <a href="#"><img src="~/Images/layout/two_colum.jpg" width="150"/></a><br />
+                                            1 - 2 - 1 แถว
+                                        </div>
+                                        <div class="layout" onclick="updateLayout(8,'web')">
+                                            <a href="#"><img src="~/Images/layout/all.jpg" width="150"/></a><br />
+                                            3แถว <br /> 
+                                            25% + 50% + 25%
+                                        </div>
+                                     </div>
+                               </div>
+                           </div>
+                        
+                        <div>
+                        <div class="weather">
+                            <div style="margin:auto;">
+                                <div class="tablet" onclick="updateLayout(1,'tablet')">
+                                   <a href="#"><img src="~/Images/layout/tablet1.png" width="170"/></a><br />
+                                       แบบที่  1
+                                   </div>
+                                <div class="tablet" onclick="updateLayout(2,'tablet')">
+                                    <a href="#"><img src="~/Images/layout/tablet2.png" width="170"/></a><br />
+                                       แบบที่  2
+                                </div>
+                                <div class="tablet" onclick="updateLayout(3,'tablet')">
+                                    <a href="#"><img src="~/Images/layout/tablet3.png" width="170"/></a><br />
+                                       แบบที่  3
+                                </div> 
+                             </div>
+                          </div>
+                       </div>
+
+                            <div>
+                                <div class="weather">
+                                    <div style="margin:auto;">
+                                            <div class="mobile" onclick="updateLayout(1,'mobile')">
+                                                <a href="#"><img src="~/Images/layout/mobile1.png" width="100"/></a><br />
+                                                    แบบที่  1
+                                            </div>
+                                            <div class="mobile" onclick="updateLayout(2,'mobile')">
+                                                 <a href="#"><img src="~/Images/layout/mobile2.png" width="100"/></a><br />
+                                                    แบบที่  2
+                                            </div>
+                                            <div class="mobile" onclick="updateLayout(3,'mobile')">
+                                                  <a href="#"><img src="~/Images/layout/mobile3.png" width="100"/></a><br />
+                                                    แบบที่  3
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div>
+                            <span style="margin:auto 5px auto 5px; padding-bottom:10px;">
+                                <input type="button" value="ตกลง" class="inputbutton" id="btnConfirm"/>
+                                <input type="button" value="ยกเลิก" class="inputbutton" />
+                            </span>
+                        </div>
+                    </div>
+
+    </div>
+</div>

@@ -1,0 +1,576 @@
+﻿@{
+    Layout = null;
+}
+      
+        <link rel="stylesheet" href="@Url.Content("~/Content/MsgBox/msgBoxLight.css")" />
+        <link rel="stylesheet" href="@Url.Content("~/Content/toastr/toastr.css")" />
+        <link rel="stylesheet" href="@Url.Content("~/Content/kendojs/kendo.common.min.css")" />
+        <link rel="stylesheet" href="@Url.Content("~/Content/kendojs/kendo.default.min.css")" />
+
+        <script src="@Url.Content("~/Scripts/kendojs/js/jquery.min.js")"></script>
+	    <script src="@Url.Content("~/Scripts/kendojs/js/kendo.all.min.js")"></script>
+	    <script src="@Url.Content("~/Scripts/kendo.modernizr.custom.js")"></script>
+        <script src="@Url.Content("~/Scripts/toastr/toastr.js")"></script>
+        <script src="@Url.Content("~/Scripts/MsgBox/jquery.msgBox.js")"></script>
+
+        <style>
+            #bottomMenu {
+                background-color: #e5d9d9;
+                left: -5px;
+                top: 92%;
+                position: fixed;
+                border:solid 1px #999;
+                height: 50px;
+                width: 100%;
+                padding: 5px;
+                z-index:999999;
+            }
+            .SEO {
+            position:fixed;
+            display:none;
+            width:350px;
+            background-color:white;
+            border:solid 2px #56b755;
+            right:25%;
+            top:15%;
+            z-index:999999;
+            box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
+            }
+           .hideSEO {
+                float:right;
+                color:#56b755;
+                border:solid white;
+            }
+            .detailSEO {
+                width:320px;
+                margin:auto;
+                padding:5px 5px 5px 5px; 
+            }
+            .font {
+            font-size:14px;
+            border-radius:5px;
+            height:25px;
+            border:solid 1px #e5d9d9;
+            padding: 5px 5px 5px 5px;
+            margin:5px 5px 5px 5px;
+            }
+            .UpImg {
+            position:fixed;
+            width:650px;
+            height:300px;
+            padding-top:30px;
+            border:solid 2px #56b755;
+            background-color:white;
+            right:3%;
+            top:15%;
+            z-index:99999;
+            box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
+            }
+            #anime {
+            border:solid 1px #999;
+            background-color:#56b755;
+            width:10px;
+            
+            }
+            #chk {
+            position:absolute;
+            right:12px; 
+            bottom:12px;
+            width:auto;
+            height:auto;
+            }
+            .btnchk {
+                border-radius: 5px;
+                background-color: #56b755;
+                color: white;
+                font-size: 12px;
+            }
+            .hver {
+               background-color:#f8f3f3;
+               border:solid 1px #fff;
+               border-radius:5px;
+               padding:5px 5px 0 5px;
+               margin:auto;
+               width:auto;
+               z-index:auto;
+               opacity:0.8;
+               filter:alpha(opacity=40);
+              
+            }
+            .hver:hover {
+               background-color:#fff;
+               border:solid 1px #56b755;
+               border-radius:5px;
+               padding:5px 5px 0 5px;
+               margin:auto;
+               width:auto;
+               opacity:1.0;
+               filter:alpha(opacity=100);
+            }
+        </style> 
+        <style scoped>
+               
+                .configuration a {
+                    color: inherit;
+                }
+
+                .configuration a:hover {
+                    text-decoration: none;
+                }
+
+                .k-editor-inline {
+                    margin: 0;
+                    /*padding: 21px 21px 11px;*/
+                    border-width: 0;
+                    box-shadow: none;
+                    background: none;
+                }
+
+                .k-editor-inline.k-state-active {
+                    border-width: 1px;
+                    /*padding: 20px 20px 10px;*/
+                    background: none;
+                }
+
+                .topEditor h2, .column h3 {
+                    font-size: 24px;
+                    color: #e15613;
+                    font-family: "Droid Sans",DroidSansWeb,"Segoe UI","Lucida Sans Unicode",Arial,Helvetica,sans-serif;
+                }
+
+                .k-editor-inline p {
+                    font-size: 13px;
+                }
+
+                .column {
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 170px;
+                }
+
+                .column a {
+                    color: #e15613;
+                }
+
+                .column h3 {
+                    padding-top: 10px;
+                    font-size: 15px;
+                }
+
+                .k-table {
+                    border-spacing: 0;
+                    border-collapse: collapse;
+                    border: 1px solid #999;
+                    width: 100%;
+                }
+
+                .k-table td, .k-table th {
+                    border: 1px solid #999;
+                    padding: 3px;
+                }
+            </style>
+        <script>
+            var id;
+            var idcontenteditor = 0
+                $(document).ready(function() {
+                    $("#topEditor").kendoEditor({
+                        tools: [
+                            "bold",
+                            "italic",
+                            "underline",
+                            "strikethrough",
+                            "justifyLeft",
+                            "justifyCenter",
+                            "justifyRight",
+                            "justifyFull",
+                            "createLink",
+                            "unlink",
+                            "insertImage",
+                            "createTable",
+                            "addColumnLeft",
+                            "addColumnRight",
+                            "addRowAbove",
+                            "addRowBelow",
+                            "deleteRow",
+                            "deleteColumn",
+                            "viewHtml",
+                            "foreColor",
+                            "backColor"
+                        ]
+                    });
+
+                    $(".tabstrip").kendoTabStrip({
+                        animation: {
+                            open: {
+                                effects: "fadeIn"
+                            }
+                        }
+                    });
+
+                    $("#files").kendoUpload({
+                        async: {
+                            saveUrl: "save",
+                            removeUrl: "remove",
+                            autoUpload: true
+                        }
+                    });
+                    $("#titles1").kendoDropDownList();
+
+                    
+
+                    var click = $(".click"),
+                        text = $(".divText"),
+                        divHTML = $("#divHTML"),
+                        PreView = $("#PreView")
+                        btMoreDetail = $(".btMoreDetail");
+
+                    $("#btnView").hide();
+                    $("#anime").hide();
+                    $(".SEO").hide();
+                    $("#Up"+i).hide();
+                    divHTML.hide();
+                    PreView.hide();
+
+                    click.bind("click", function () {
+                        
+                        var id_button = $(this).attr("id_button");
+                        console.log(id_button);
+                        switch (id_button) {
+                            case '1':
+                                close();
+                                break;
+                            case '2':
+                                text.show();
+                                divHTML.hide();
+                                PreView.hide();
+                                $(".tabstrip").show();
+                                $("#btnView").hide();
+                                $("#btnPreView").show();
+                                break;
+                          
+                            case '3':
+                                PreView.show();
+                                text.hide();
+                                divHTML.hide();
+                                $(".tabstrip").hide();
+                                $("#btnView").show();
+                                $("#btnPreView").hide();
+                                break;
+                        }
+                    });
+
+                    //var i = window.location.href.toString().split(window.location.host)[1];
+                    //alert(i);
+                    
+                     
+                });//document ready
+
+                var i = 0;
+                function appentblock() {
+                    i++;
+                    toastr.success('ลงด้านล่างเพื่อแก้ไข รายละเอียด', 'เพิ่มบล๊อกเรียบร้อยแล้ว')
+
+                    var div = "<div id=\"B" + i + "\" class=\"hver\" style=\"\"><div id=\"Up" + i + "\" class=\"UpImg\"><div style=\"color:#888; margin:10px 10px 10px 10px; border: dashed 2px #e5d9d9; border-radius: 5px; padding:100px 10px 100px 10px;width:300px; display:inline-table;\"><center><h4>ลากและวางรูปภาพของคุณที่นี่</h4></center></div><div style=\"font-size:14px; margin:10px 10px 10px 10px; float:right; border:solid 1px #e5d9d9; padding:10px 10px 10px 10px;border-radius:5px;\"><fieldset style=\"border-radius:5px; margin-bottom:5px; width:225px;\"><legend>ตำแหน่งภาพ</legend>ซ้าย <input type=\"radio\" name=\"radio\" /> กลาง<input type=\"radio\" name=\"radio\" /> ขวา <input type=\"radio\" name=\"radio\" /></fieldset><input type=\"file\" name=\"file\" id=\"files" + i + "\" /><br /><font size=\"2\" color=\"#888\"><li>เฉพาะไฟล์ภาพ jpg, jpeg, png </li><li>ระบบจะย่อภาพให้อัตโนมัติ</li></font><br /><div style=\"border-radius:5px; margin:5px;\"><input onclick=\"ImgClose(" + i + ")\" type=\"button\" value=\"Close Upload Images\" style=\"border-radius:5px; height:30px; width:100%;\" /></div></div></div><div contentEditable id=\"topEditor" + i + "\" style=\"width:auto; padding:0 5px 0 5px;\"><h2>บล๊อก " + i + "</h2><p>กรุณาเพิ่มรายละเอียด.....</p><br /></div><div id=\"block" + i + "\" class=\"divblock\" style=\"border:solid 1px #e5d9d9; padding:5px 5px 5px 5px; margin-top:5px; margin-bottom:5px; border-radius:5px;\"><input onclick=\"ImgOpen(" + i + ")\" type=\"button\" value=\"Upload Images\" style=\"border-radius:5px; height:30px; background-color:#56b755; color:white;\" /><input onclick=\"Delblock(" + i + ")\" type=\"button\" value=\"ลบ\" style=\"width:40px; height:30px; margin-right:3px; color:white; font-weight: bold; background-color:#56b755; border-radius: 5px; float:right;\" /> <input onclick=\"appentblock()\"type=\"button\" value=\"เพิ่ม\" style=\"width:40px; height:30px; margin-right:3px; color:white; font-weight: bold; background-color:#56b755; border-radius: 5px; float:right;\" /><input onclick=\"downblock(" + i + ")\"type=\"button\" value=\"ลง\" style=\"width:40px; height:30px; margin-right:3px; color:white; font-weight: bold; background-color:#56b755; border-radius: 5px; float:right;\" /><input onclick=\"upblock(" + i + ")\"type=\"button\" value=\"ขึ้น\" style=\"width:40px; height:30px; margin-right:3px; color:white; font-weight: bold; background-color:#56b755; border-radius: 5px; float:right;\" /></div>"
+
+                    var divView = "<div class=\"topEditor\" style=\"width:620px;\"><div><h2>บล๊อก " + i + "</h2></div>กรุณากรอกรายละเอียดเพิ่มเติม</div>"
+
+                    $.ajax({
+                        type: "POST",
+                        url: "/ContentManager/AddContent",
+                        data: {
+                            idcontenteditor: idcontenteditor
+                        },
+                        success: function (result) {
+                            if (i == 1) {
+                                idcontenteditor = result;
+                            }
+                            $("#divEditor").append(div);
+
+                            var p = $("#B" + i).position();
+                            window.scrollTo(p.left, p.top);
+                            kendo.fx("#B" + i).transfer($(".show1").fadeIn(1500))
+                            .play()
+                            $("#divEditor").append(div);
+
+                            $("#PreView").append(divView);
+
+                            $("#Up" + i).hide();
+                            $("#SEOID" + i).hide();
+                            $("#SEOblock" + i).hide();
+                            $("#topEditor" + i).kendoEditor({
+                                tools: [
+                                "bold",
+                                "italic",
+                                "underline",
+                                "strikethrough",
+                                "justifyLeft",
+                                "justifyCenter",
+                                "justifyRight",
+                                "justifyFull",
+                                "createLink",
+                                "unlink",
+                                "insertImage",
+                                "createTable",
+                                "addColumnLeft",
+                                "addColumnRight",
+                                "addRowAbove",
+                                "addRowBelow",
+                                "deleteRow",
+                                "deleteColumn",
+                                "viewHtml",
+                                "foreColor",
+                                "backColor"
+                                ]
+                            });
+                            $("#files" + i).kendoUpload();
+                            $("#titles" + i).kendoDropDownList();
+                        },
+                        error: function (req, status, error) {
+                            alert("Can't Show data");
+                        }
+                    });
+
+                }
+
+               
+                var a = 1;
+                function appentSEO() {
+                    a++;
+                    var mordt = "<div id=\"S" + a + "\" class=\"hver\" ><div contentEditable id=\"Editor" + a + "\" style=\"width:auto; padding:0 5px 0 5px; margin-bottom:5px;\"><h2>รายละเอียด More Detail " + a + "</h2><p>กรุณาเพิ่มรายละเอียด.....</p><br /></div><div id=\"SEOblock" + a + "\" class=\"TabSEO\" style=\"border:solid 1px #e5d9d9; padding:5px 5px 5px 5px; margin-bottom:5px; border-radius:5px;\"><select id=\"titles" + a + "\"style=\"width: 150px;\"><option>เลือกประเภทปุ่ม More Detail</option></select>&nbsp;ต่อท้ายคำ <input type=\"radio\" name=\"radio\" />ขึ้นบรรทัดใหม่ <input type=\"radio\" name=\"radio\" /><input onclick=\"ClickSEO(" + a + ");\" type=\"button\" value=\"SEO\" style=\"border-radius:5px; width:50px;margin-left:5px; height:30px; float:right;\" /><input onclick=\"DelSEO(" + a + ")\" type=\"button\" value=\"ลบ\" style=\"width:40px; height:30px; margin-right:3px; color:white; font-weight: bold; background-color:#e15613; border-radius: 5px; float:right;\" /><input onclick=\"appentSEO();\"type=\"button\" value=\"เพิ่ม\" style=\"width:40px; height:30px; margin-right:3px; color:white; font-weight: bold; background-color:#e15613; border-radius: 5px; float:right;\" /><input onclick=\"downmordetail(" + a + ");\"type=\"button\" value=\"ลง\" style=\"width:40px; height:30px; margin-right:3px; color:white; font-weight: bold; background-color:#e15613; border-radius: 5px; float:right;\" /><input onclick=\"upmordetail(" + a + ");\"type=\"button\" value=\"ขึ้น\" style=\"width:40px; height:30px; margin-right:3px; color:white; font-weight: bold; background-color:#e15613; border-radius: 5px; float:right;\" /></div><div id=\"SEOID" + a + "\" class=\"SEO\"><div class=\"hideSEO\"><span style=\"cursor:pointer;\" onclick=\"hideSEO(" + a + ");\">ปิด</span></div><div class=\"detailSEO\"><table cellpadding=\"2\" cellspacing=\"2\" border=\"0\" class=\"font\"><tbody><tr><td rowspan=\"2\" align=\"right\">&nbsp;</td><td>ชื่อหัวข้อของเพจ (Title)</td></tr><tr><td><input class=\"font\" name=\"Title\" type=\"text\" value=\"หน้าแรก\" id=\"Title\" data-bind=\"value: data.Title\" /></td></tr><tr><td rowspan=\"2\" align=\"right\">&nbsp;</td><td>คำค้นหาใช้ ,เพื่อแยกคำ(Keyword)</td></tr><tr><td><input class=\"font\" name=\"Keyword\" type=\"text\" id=\"Keyword\" data-bind=\"value: data.Keyword\" /></td></tr><tr><td rowspan=\"4\" align=\"right\">&nbsp;</td><td>คำอธิบายหน้า(Description)</td></tr><tr><td><textarea name=\"Discription\" rows=\"4\" cols=\"45\" id=\"Discription\" style=\"border-radius:5px; border-color:#e5d9d9;\"></textarea></td></tr><tr><td>URL Rewrite :</td></tr><tr><td><input class=\"font\" name=\"Rewrite\" type=\"text\" id=\"Rewrite\" data-bind=\"value: data.Rewrite\" /></td></tr><tr><td>&nbsp;</td><td><input class=\"font\" type=\"button\" name=\"ok\" value=\"ตกลง\" /></td></tr></tbody></table></div></div></div></div>"
+
+                    $("#divMordetail").append(mordt);
+
+                    var pp = $("#S" + a).position();
+                    console.log(pp.left);
+                    console.log(pp.top);
+                    window.scrollTo(pp.left, pp.top);
+                    kendo.fx("#S" + a).transfer($(".show2").fadeIn(1500))
+                    .play()
+                    $("#divMordetail").append(mordt);
+
+
+                    $("#SEOID" + a).hide();
+
+                    $("#Editor" + a).kendoEditor({
+                        tools: [
+                        "bold",
+                        "italic",
+                        "underline",
+                        "strikethrough",
+                        "justifyLeft",
+                        "justifyCenter",
+                        "justifyRight",
+                        "justifyFull",
+                        "createLink",
+                        "unlink",
+                        "insertImage",
+                        "createTable",
+                        "addColumnLeft",
+                        "addColumnRight",
+                        "addRowAbove",
+                        "addRowBelow",
+                        "deleteRow",
+                        "deleteColumn",
+                        "viewHtml",
+                        "foreColor",
+                        "backColor"
+                        ]
+                    });
+                    $("#titles" + a).kendoDropDownList();
+
+                }
+
+
+                function Delblock(id) {
+                    
+                    $.msgBox({
+                        title: "ลบข้อมูล",
+                        content: "คุณต้องการลบบล๊อกข้อความ จริงหรือไม่?",
+                        type: "confirm",
+                        buttons: [{ value: "Yes" }, { value: "No" }, { value: "Cancel" }],
+                        success: function (result) {
+                            if (result == "Yes") {
+                                $("#B" + id).remove();
+                            }
+                        }
+                    });
+                    
+                }
+                function DelSEO(id) {
+
+                    $.msgBox({
+                        title: "ลบข้อมูล",
+                        content: "คุณต้องการลบบล๊อกรายละเอียด จริงหรือไม่?",
+                        type: "confirm",
+                        buttons: [{ value: "Yes" }, { value: "No" }, { value: "Cancel" }],
+                        success: function (result) {
+                            if (result == "Yes") {
+                                $("#S" + id).remove();
+                            }
+                        }
+                    });
+
+                }
+
+                function upblock(id) {
+                    var up = $("#B" + id).prev();
+                    $("#B" + id).after(up);
+                }
+                function downblock(id) {
+                    var down = $("#B" + id).next();
+                    $("#B" + id).before(down);
+                }
+
+                function upmordetail(id) {
+                    var up = $("#S" + id).prev();
+                    $("#S" + id).after(up);
+                }
+                function downmordetail(id) {
+                    var down = $("#S" + id).next();
+                    $("#S" + id).before(down);
+                }
+
+                function hideSEO(id) {
+                    $("#SEOID" + id).hide("slow", function () {
+                    });
+                }
+                function ClickSEO(id) {
+                    $("#SEOID" + id).show("slow", function () {
+                    });
+                }
+
+                function ImgOpen(id) {
+                    $("#Up"+id).show("slow", function () {
+                      
+                    });
+                }
+                function ImgClose(id) {
+                    $("#Up"+id).hide("slow", function () {
+                    });
+                }
+                function addblock(id) {
+                    $("#block" + id).show();
+                }
+                function save() {
+                    close();
+                }
+                
+            </script>
+
+<div class="tabstrip" style="margin-bottom:5px;">
+                    <ul>
+                        <li class="k-state-active">
+                           พิมพ์ข้อความ
+                        </li>
+                        <li >
+                           รายละเอียด
+                        </li>
+                    </ul>
+
+<div style="border:solid 1px #e5d9d9;margin-bottom:50px; background:#fff;  padding:5px 10px 5px 10px;">
+  
+    <div id="divEditor" style="padding-bottom:6px">
+    <div class ="hver" >
+
+         <div id="block1" class="divblock" style="border:solid 1px #e5d9d9; margin-top:5px; padding:5px 5px 5px 5px; margin-bottom:5px; border-radius:5px;text-align:right">
+             <input onclick="appentblock()"type="button" value="เพิ่ม" style="width:40px; height:30px; margin-right:3px; color:white; font-weight: bold; background-color:#56b755; border-radius: 5px; /*float:right;*/" />
+         </div>
+       </div>
+        <div class="show1"></div>
+    </div>    
+</div>
+
+<div style="border:solid 1px #e5d9d9;margin-bottom:50px; background:#fff;  padding:5px 10px 5px 10px;">
+<div id="divMordetail" style=" padding-bottom:6px;">
+    <div class="hver">
+    <div contentEditable class="topEditor" style="width:auto; padding:0 5px 0 5px; margin-bottom:5px;">
+            <h2>
+              รายละเอียด More Detail
+            </h2>
+            <p>กรุณาเพิ่มรายละเอียด.....</p>
+            <br />  
+         </div>
+
+     <div id="SEOblock1" class="TabSEO" style="border:solid 1px #e5d9d9; padding:5px 5px 5px 5px; margin-bottom:5px; border-radius:5px;">
+       <select id="titles1"style="width: 150px;">
+         <option>เลือกประเภทปุ่ม More Detail</option>
+       </select>&nbsp;
+         ต่อท้ายคำ <input type="radio" name="radio" />
+         ขึ้นบรรทัดใหม่ <input type="radio" name="radio" />
+        <input onclick="ClickSEO(1);" type="button" value="SEO" style="border-radius:5px; width:50px;margin-left:10px; height:30px; float:right;" />
+        <input onclick="appentSEO();"type="button" value="เพิ่ม" style="width:40px; height:30px; margin-right:3px; color:white; font-weight: bold; background-color:#e15613; border-radius: 5px; float:right;" />
+     </div>
+        <div id="SEOID1" class="SEO">
+            <div class="hideSEO"><span onclick="hideSEO(1)" style="cursor:pointer;">ปิด</span></div>
+            <div id="detailSEO">
+              <table cellpadding="2" cellspacing="2" border="0" class="font">
+                 <tbody>
+                     <tr>
+                         <td rowspan="2" align="right">&nbsp;</td>
+                         <td>ชื่อหัวข้อของเพจ (Title)</td>
+                      </tr>
+                      <tr>
+                         <td><input class="font" name="Title" type="text" value="หน้าแรก" id="Title" data-bind="value: data.Title" /></td>
+                      </tr>
+                      <tr>
+                         <td rowspan="2" align="right">&nbsp;</td>
+                         <td>คำค้นหาใช้ ,เพื่อแยกคำ(Keyword)</td>
+                      </tr>
+                      <tr>
+                         <td><input class="font"  name="Keyword" type="text" id="Keyword" data-bind="value: data.Keyword" /></td>
+                      </tr>
+                      <tr>
+                         <td rowspan="4" align="right">&nbsp;</td>
+                         <td>คำอธิบายหน้า(Description)</td>
+                       </tr>
+                       <tr>
+                          <td><textarea  name="Discription" rows="4" cols="45" id="Discription" style="border-radius:5px; border-color:#e5d9d9;"></textarea></td>
+                       </tr>
+                       <tr>
+                          <td>URL Rewrite :</td>
+                      </tr>
+                      <tr>
+                          <td><input class="font"  name="Rewrite" type="text" id="Rewrite" data-bind="value: data.Rewrite" /></td>
+                      </tr>
+                     <tr>
+                         <td>&nbsp;</td>
+                         <td><input class="font" type="button" name="ok" value="ตกลง" /></td>
+                     </tr>
+                    </tbody>
+                 </table>
+              </div>
+           </div>
+        </div>
+     </div>   
+            <div class="show2"></div>
+    </div>
+</div>
+
+<div id="divHTML">
+    <table style="margin:auto; padding-top:10px; padding-bottom:13px;">
+        <tr>
+            <td>
+                <textarea id="TextArea1" cols="105" rows="21">
+<meta charset="utf-8" />
+
+               </textarea>
+            </td>
+        </tr>
+    </table>
+   </div>
+   <div id="PreView" style="padding-bottom:6px; padding-left:20px;">
+          <div  class="topEditor" style="width:620px;">
+
+         </div>
+    </div>
+<div id="bottomMenu">
+    <table style="width:100%;">
+        <tr>
+            <td><input onclick="save()" class="click" id_button="1" type="image" src="~/Images/filesave.png" value="Save" style="width:30px; height:30px; margin-left:10px; border-radius: 5px;" />  
+                <input id="btnView" class="click" id_button="2" type="image" src="~/Images/edit-icon.png" value="View" style="width:30px; height:30px; margin-left:10px; border-radius: 5px;" />
+                <input id="btnPreView" class="click" id_button="3" type="image" src="~/Images/PreView.png" value="PreView" style="width:30px; height:30px; margin-left:10px; border-radius: 5px;" />
+            </td>
+        </tr>
+    </table>
+</div>
+

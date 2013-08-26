@@ -1,0 +1,31 @@
+﻿@model GalacticNebula.Models.showContentEditor
+<script>
+    $("#Editor@(Model.id)").kendoEditor({
+        select: onSelect,
+    tools: [
+        "bold",
+        "italic",
+        "underline",
+        "strikethrough",
+        "justifyLeft",
+        "justifyCenter",
+        "justifyRight",
+        "justifyFull",
+        "createLink",
+        "unlink",
+        "insertImage",
+        "createTable",
+        "addColumnLeft",
+        "addColumnRight",
+        "addRowAbove",
+        "addRowBelow",
+        "deleteRow",
+        "deleteColumn",
+        "viewHtml",
+        "foreColor",
+        "backColor"
+    ]
+});
+    </script>
+
+ 

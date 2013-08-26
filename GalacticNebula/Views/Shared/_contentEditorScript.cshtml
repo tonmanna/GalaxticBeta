@@ -1,0 +1,32 @@
+﻿@model GalacticNebula.Models.showContentEditor
+@*$("#Up@(Model.id)").hide();*@
+@*$("#block@(Model.id)").hide();*@
+$("#topEditor@(Model.id)").kendoEditor({
+    select: onSelect,
+    tools: [
+        "bold",
+        "italic",
+        "underline",
+        "strikethrough",
+        "justifyLeft",
+        "justifyCenter",
+        "justifyRight",
+        "justifyFull",
+        "createLink",
+        "unlink",
+        "insertImage",
+        "createTable",
+        "addColumnLeft",
+        "addColumnRight",
+        "addRowAbove",
+        "addRowBelow",
+        "deleteRow",
+        "deleteColumn",
+        "viewHtml",
+        "foreColor",
+        "backColor"
+    ]
+});
+
+
+ 

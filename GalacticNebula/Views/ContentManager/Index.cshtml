@@ -1,0 +1,1830 @@
+﻿@{
+    ViewBag.Title = "Content";
+}
+
+            <style>
+                .bg-header {
+                background:url(../Images/bg/bg_header.png) repeat-x;
+                }
+                .bg {
+                margin:0 auto; 
+       
+                }
+                .status {    
+                -webkit-border-radius: 2px;
+                -moz-border-radius: 2px;
+                border-radius: 2px;
+                }
+            </style>
+
+            <style scoped>
+                /*tabstrip*/
+                .weather {
+                    height:100%;
+                }
+            </style>
+            <style scoped>
+            /*slideleft*/
+                #slide-in-share {
+                    position: fixed;
+                    top: 185px;
+                    left: 0;
+                    width: 300px;               
+                    margin-left: -300px;
+                    border: solid #e9e9e9;
+                    border-width: 1px 1px 1px 0;
+                    background-color:white;      
+                }
+
+                #slide-in-handle {
+                    position: absolute;
+                    left: 300px;
+                    width: 31px;
+                    height: 69px;
+                    background: #1b7458 url(../Images/page.png) no-repeat 50% 50%;
+                    color: #fff;
+                    text-indent: -999em;
+                }
+
+                #slide-in-share ul {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    background: #fff;
+ 
+                }
+
+                #slide-in-share li {
+                    margin: 0 2px;
+               }
+            </style>
+            <style scoped>
+            /*slideright*/
+                #slide-in-share2 {
+                    position: fixed;
+                    top: 185px;
+                    right: 0;
+                    width: 250px;                
+                    margin-right: -250px;
+                    background-color:white;      
+                }
+
+                #slide-in-handle2 {
+                    position: absolute;
+                    right: 250px;
+                    width: 31px;
+                    height: 69px;
+                    background: #1b7458 url(../Images/content.png) no-repeat 50% 50%;
+                    color: #fff;
+                    text-indent: -999em;
+                }
+
+                #slide-in-share2 ul {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    background: #fff;
+ 
+                }
+
+                #slide-in-share2 li {
+                    margin: 0 2px;
+               }
+            </style>            
+           
+            <style scoped>
+                /*window*/
+                #undo {
+                    text-align: center;
+                    white-space: nowrap;
+                    padding: 1em;
+                    cursor: pointer;
+                }
+            </style>
+
+        
+
+        <style>
+            #bottomMenu {
+                background-color: #e5d9d9;
+                left: -5px;
+                top: 92%;
+                position: fixed;
+                border:solid 1px #999;
+                height: 50px;
+                width: 100%;
+                padding: 5px;
+                z-index:999999;
+            }
+            .SEO {
+            position:fixed;
+            display:none;
+            width:350px;
+            background-color:white;
+            border:solid 2px #56b755;
+            right:25%;
+            top:15%;
+            z-index:999999;
+            box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
+            }
+           .hideSEO {
+                float:right;
+                color:#56b755;
+                border:solid white;
+            }
+            .detailSEO {
+                width:320px;
+                margin:auto;
+                padding:5px 5px 5px 5px; 
+            }
+            .font {
+            font-size:14px;
+            border-radius:5px;
+            height:25px;
+            border:solid 1px #e5d9d9;
+            padding: 5px 5px 5px 5px;
+            margin:5px 5px 5px 5px;
+            }
+            .UpImg {
+            position:fixed;
+            width:650px;
+            height:300px;
+            padding-top:30px;
+            border:solid 2px #56b755;
+            background-color:white;
+            right:3%;
+            top:15%;
+            box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
+            }
+            #anime {
+            border:solid 1px #999;
+            background-color:#56b755;
+            width:10px;
+            
+            }
+            #chk {
+            position:absolute;
+            right:12px; 
+            bottom:12px;
+            width:auto;
+            height:auto;
+            }
+            .btnchk {
+                border-radius: 5px;
+                background-color: #56b755;
+                color: white;
+                font-size: 12px;
+            }
+            .hver {
+               background-color:#f8f3f3;
+               border:solid 1px #fff;
+               border-radius:5px;
+               padding:5px 5px 5px 5px;
+               margin:auto;
+               width:auto;
+               z-index:auto;
+               opacity:0.8;
+               filter:alpha(opacity=40);
+              
+            }
+            .hver:hover {
+               background-color:#fff;
+               border:solid 1px #56b755;
+               border-radius:5px;
+               padding:5px 5px 5px 5px;
+               margin:auto;
+               width:auto;
+               z-index:auto;
+               opacity:1.0;
+               filter:alpha(opacity=100);
+            }
+
+            .fancybox2 {
+              cursor:default;
+              border:2px solid #ff0000;
+              background-color:none;
+              text-decoration:none;
+            }
+            .fancybox2:hover{
+               background-color:none;
+               text-decoration:none;
+               border:none !important;       
+            }
+            .fancybox2 img{
+                background-color:none;
+                border:1px solid #00ffff;                
+            }
+        </style> 
+        <style scoped>
+               
+                .configuration a {
+                    color: inherit;
+                }
+
+                .configuration a:hover {
+                    text-decoration: none;
+                }
+
+                .k-editor-inline {
+                    margin: 0;
+                    /*padding: 21px 21px 11px;*/
+                    border-width: 0;
+                    box-shadow: none;
+                    background: none;
+                }
+
+                .k-editor-inline.k-state-active {
+                    border-width: 1px;
+                    /*padding: 20px 20px 10px;*/
+                    background: none;
+                }
+
+                .topEditor h2, .column h3 {
+                    font-size: 24px;
+                    color: #e15613;
+                    font-family: "Droid Sans",DroidSansWeb,"Segoe UI","Lucida Sans Unicode",Arial,Helvetica,sans-serif;
+                }
+
+                .k-editor-inline p {
+                    font-size: 13px;
+                }
+
+                .column {
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 170px;
+                }
+
+                .column a {
+                    color: #e15613;
+                }
+
+                .column h3 {
+                    padding-top: 10px;
+                    font-size: 15px;
+                }
+
+                .k-table {
+                    border-spacing: 0;
+                    border-collapse: collapse;
+                    border: 1px solid #999;
+                    width: 100%;
+                }
+
+                .k-table td, .k-table th {
+                    border: 1px solid #999;
+                    padding: 3px;
+                }
+                #listView {
+            padding: 10px;
+            margin-bottom: -1px;
+            /*min-width: 555px;
+            min-height: 510px;*/
+        }
+        .product {
+            /*float: left;*/
+            /*position: relative;*/
+            width: 111px;
+            display:inline-table;           
+            margin: 0;
+            padding: 0;
+        }
+        .product img {
+           
+        }
+            </style>
+
+            <script type="text/x-kendo-tmpl" id="template">
+                    <div class="product" style="cursor: pointer; ">
+                        <img src="/ContentManager/ImageIcon?id=#:filename#" />
+                    </div>
+            </script>
+
+            <div id="appendscript"></div>
+            <script type="text/javascript">
+                var kendoWindow, kendoWindow2, kendoWindow3, kendoWindow4, tabcontent;
+                var old_ideditor, ideditor, imgname;
+                var dataEditor, editor, newcontent;
+                var type_content = 'content';
+
+                $(document).ready(function () {
+                    var dataSource = new kendo.data.DataSource({
+                        transport: {
+                            read: {
+                                url: "http://localhost:54236/contentManager/getIconResource",
+                                dataType: "json"
+                            }
+                        }
+                    });
+
+                    $("#listView").kendoListView({
+                        dataSource: dataSource,
+                        selectable: "single",
+                        change: listviewChange,
+                        template: kendo.template($("#template").html())
+                    });
+
+                    function listviewChange() {
+                        var idcontenteditordetail = $('#morehidden').val();
+                        var data = dataSource.view(),
+                            selected = $.map(this.select(), function (item) {
+                                return data[$(item).index()].filename;
+                            });
+                        var i = selected.toString();
+                        
+                        $.ajax({
+                            type: "POST",
+                            url: "/ContentManager/UpdateLinkTypeValue",
+                            data: {
+                                idcontenteditordetail: idcontenteditordetail, linktypepath: i
+                            },
+                            success: function (result) {
+                                $('#moredetailshow').html('<img id="linkvaluepreview" src="/ContentManager/ImageIcon?id=' + i + '"/>');
+                                $('#img_icon').toggle(600);
+                            },
+                            error: function (req, status, error) {
+
+                            }
+                        });
+
+                    }
+
+                    $("#titles").kendoDropDownList();
+                    $('.fancybox').fancybox();
+
+                    tabcontent = $("#tabcontent").kendoTabStrip({
+                        select: onSelectTab,
+                        animation: {
+                            open: {
+                                effects: "fadeIn"
+                            }
+                        }
+                    }).data("kendoTabStrip");
+
+                    $("#treeview").kendoTreeView();
+
+                    $("#menu").kendoMenu();
+
+                    $("#tabstrip").kendoTabStrip({
+                        animation: {
+                            open: {
+                                effects: "fadeIn"
+                            }
+                        }
+                    });
+
+                    //---- slide Left ----
+                    var slide = kendo.fx($("#slide-in-share")).slideIn("left"),
+                    visible = true;
+
+                    $("#slide-in-handle").click(function (e) {
+                        if (visible) {
+                            slide.reverse();
+                        } else {
+                            slide.play();
+                        }
+                        visible = !visible;
+                        e.preventDefault();
+                    });
+                    //---- slide Rigt ----
+                    var slide2 = kendo.fx($("#slide-in-share2")).slideIn("right"),
+                    visible2 = true;
+
+                    $("#slide-in-handle2").click(function (e) {
+                        if (visible2) {
+                            slide2.reverse();
+                        } else {
+                            slide2.play();
+                        }
+                        visible2 = !visible2;
+                        e.preventDefault();
+                    });
+
+                    // ---- window ---- 
+
+                    var window = $("#window"),
+                        undo = $(".undo");
+
+                    window.hide();
+
+                    if (!window.data("kendoWindow")) {
+                        window.kendoWindow({
+                            width: "720px",
+                            scrolling: "no",
+                            overflow: "hidden",
+                            visible: false,
+                            resizable: false,
+                            modal: true,
+                            actions: ["Minimize", "Maximize", "Close"],
+                            title: "จัดการข้อมูล",
+                            close: function () {
+                                undo.show();
+                            }
+                        });
+
+                        kendoWindow = window.data("kendoWindow");
+                    }
+
+
+                    var window2 = $("#window2");
+
+                    window2.hide();
+
+                    if (!window2.data("kendoWindow")) {
+                        window2.kendoWindow({
+                            width: "1000px",
+                            overflow: "hidden",
+                            visible: false,
+                            resizable: false,
+                            modal: true,
+                            actions: ["Minimize", "Maximize", "Close"],
+                            title: "แก้ไขContent",
+                            close: onClose
+                        });
+
+                        kendoWindow2 = window2.data("kendoWindow");
+                        kendoWindow2.center();
+                    }
+
+                    var window3 = $("#windowupload");
+
+                    window3.hide();
+
+                    if (!window3.data("kendoWindow")) {
+                        window3.kendoWindow({
+                            width: "690px",
+                            height: "350px",
+                            resizable: false,
+                            title: "UploadImage"
+                        });
+
+                        kendoWindow3 = window3.data("kendoWindow");
+                        kendoWindow3.center();
+                    }
+
+
+                    var window4 = $("#seowindow");
+
+                    window4.hide();
+
+                    if (!window4.data("kendoWindow")) {
+                        window4.kendoWindow({
+                            width: "400px",
+                            resizable: false,
+                            title: "SEO"
+                        });
+
+                        kendoWindow4 = window4.data("kendoWindow");
+                        kendoWindow4.center();
+                    }
+
+
+                     @Html.Raw(ViewBag.script)
+
+                    $('#EditContent').click(function () {
+                        kendoWindow2.open();
+
+                    });
+
+                    //upload
+
+                    $("#files").kendoUpload({
+                        async: {
+                            saveUrl: "/ContentManager/uploadpic",
+                        },
+                        upload: onUpload,
+                        success: onSuccess,
+                        multiple: false
+                    });
+
+
+                    $("#deliamge").click(function () {
+
+                        $.ajax({
+                            type: "POST",
+                            url: "/ContentManager/DeleteImg",
+                            data: {
+                                idcontenteditor: ideditor, type: type_content
+                            },
+                            success: function (result) {
+                                if (type_content != 'moredetail') {
+                                    $('#img' + ideditor).html(" ");
+                                }
+                                $('#previewimg').html(" ");
+                                $('#size2').prop('checked', true);
+                                $("#sizefield").attr('disabled', 'disabled');
+                                $("#trickfield").attr('disabled', 'disabled');
+                                $("#posfield").attr('disabled', 'disabled');
+
+                                $('#previewimg').html("<center><h4>ลากและวางรูปภาพของคุณที่นี่</h4></center>");
+                                $("#deliamge").hide();
+
+                            },
+                            error: function (req, status, error) {
+
+                            }
+                        });
+
+                    });
+                });
+
+                function onUpload(e) {
+                    e.data = { id: ideditor, type: type_content };
+                }
+
+                function onClose(e) {
+                    if (old_ideditor != undefined) {
+                        if (type_content == 'content') {
+                            var dataEditor = "#topEditor" + old_ideditor
+                            var editor = $(dataEditor).data("kendoEditor");
+                            var newcontent = editor.value();
+                        }
+                        else if (type_content == 'moredetail') {
+                            var dataEditor = "#Editor" + old_ideditor
+                            var editor = $(dataEditor).data("kendoEditor");
+                            var newcontent = editor.value();
+                        }
+
+                        $.ajax({
+                            type: "POST",
+                            url: "/ContentManager/UpdateContent",
+                            data: {
+                                idcontenteditor: old_ideditor, textdata: newcontent, type: type_content
+                            },
+                            success: function (result) {
+                                if (type_content == 'content') {
+                                    var editor = "#txt" + old_ideditor
+                                    $("#txt" + old_ideditor).html(newcontent);
+                                }
+                                old_ideditor = undefined;
+                            },
+                            error: function (req, status, error) {
+
+                            }
+                        });
+                    }
+
+                }
+
+                function selectType(type) {
+                    if (type == 1) {
+                        document.getElementById("content1").innerHTML = '<iframe src="ContentManager/Content_textImg" width="705" height="520" scrolling="auto" frameborder="0"></iframe>';
+                        kendoWindow.open();
+                    }
+
+                    else if (type == 2) {
+                        document.getElementById("content1").innerHTML = '<iframe src="Images_link" width="705" height="520" scrolling="auto" frameborder="0"></iframe>';
+                        kendoWindow.open();
+                    }
+
+                    else if (type == 3) {
+                        document.getElementById("content1").innerHTML = '<iframe src="Images_gallery" width="705" height="520" scrolling="auto" frameborder="0"></iframe>';
+                        kendoWindow.open();
+                    }
+                }
+
+                function Delblock(id, mode) {
+
+                    $.msgBox({
+                        title: "ลบข้อมูล",
+                        content: "คุณต้องการลบบล๊อกข้อความ จริงหรือไม่?",
+                        type: "confirm",
+                        buttons: [{ value: "Yes" }, { value: "No" }, { value: "Cancel" }],
+                        success: function (result) {
+                            if (result == "Yes") {
+
+                                if (old_ideditor == id) {
+                                    $.ajax({
+                                        type: "POST",
+                                        url: "/ContentManager/DeleteBlock",
+                                        data: {
+                                            idcontenteditor: id, type: type_content
+                                        },
+                                        success: function (result) {
+                                            if (type_content == 'content') {
+                                                if (mode == 'parent') {
+                                                    $("#allcontent").html('<br/><br/><br/>');
+                                                    $("#editwindow").html(' ')
+                                                }
+                                                else if (mode == 'child') {
+                                                    $("#B" + id).remove();
+                                                    $("#preview" + id).remove();
+                                                }
+                                            }
+                                            else if (type_content == 'moredetail') {
+                                                if (mode == 'parent') {
+                                                    $("#moreDetailData").html(' ')
+                                                }
+                                                else if (mode == 'child') {
+                                                    $("#S" + id).remove();
+                                                }
+                                            }
+                                            old_ideditor = undefined;
+                                        },
+                                        error: function (req, status, error) {
+
+                                        }
+                                    });
+                                }
+                                else {
+                                    if (type_content == "content") {
+                                        if (old_ideditor == undefined) {
+                                            old_ideditor = id;
+                                        }
+                                        dataEditor = "#topEditor" + old_ideditor
+                                        editor = $("#topEditor" + old_ideditor).data("kendoEditor");
+                                        newcontent = editor.value();
+                                    }
+                                    else if (type_content == "moredetail")
+                                    {
+                                        if (old_ideditor == undefined) {
+                                            old_ideditor = id;
+                                        }
+                                        dataEditor = "#Editor" + old_ideditor
+                                        editor = $("#Editor" + old_ideditor).data("kendoEditor");
+                                        newcontent = editor.value();
+                                    }
+
+                                    $.ajax({
+                                        type: "POST",
+                                        url: "/ContentManager/UpdateContent",
+                                        data: {
+                                            idcontenteditor: old_ideditor, textdata: newcontent, type: type_content
+                                        },
+                                        success: function (result) {
+                                            if (type_content == "content") {
+                                                var txt = '#txt' + old_ideditor;
+                                                $(txt).html(newcontent);
+                                            }
+
+                                            $.ajax({
+                                                type: "POST",
+                                                url: "/ContentManager/DeleteBlock",
+                                                data: {
+                                                    idcontenteditor: id, type: type_content
+                                                },
+                                                success: function (result) {
+                                                    if (type_content == 'content') {
+                                                        if (mode == 'parent') {
+                                                            $("#allcontent").html('<br/><br/><br/>');
+                                                            $("#editwindow").html(' ')
+                                                        }
+                                                        else if (mode == 'child') {
+                                                            $("#B" + id).remove();
+                                                            $("#preview" + id).remove();
+                                                        }
+                                                    }
+                                                    else if (type_content == 'moredetail') {
+                                                        if (mode == 'parent') {
+                                                            $("#moreDetailData").html(' ')
+                                                        }
+                                                        else if (mode == 'child') {
+                                                            $("#S" + id).remove();
+                                                        }
+                                                    }
+                                                    old_ideditor = undefined;
+                                                },
+                                                error: function (req, status, error) {
+
+                                                }
+                                            });
+                                        },
+                                        error: function (req, status, error) {
+
+                                        }
+                                    });
+
+                                }
+
+
+                            }
+                        }
+                    });
+
+                }
+
+                function appentblock(id) {
+                    if (old_ideditor == undefined) {
+                        old_ideditor = id;
+                    }
+
+                    if (type_content == 'content') {
+                        dataEditor = "#topEditor" + old_ideditor
+                        editor = $("#topEditor" + old_ideditor).data("kendoEditor");
+                        newcontent = editor.value();
+                    }
+                    else if (type_content == 'moredetail') {
+                        dataEditor = "#Editor" + old_ideditor
+                        editor = $("#Editor" + old_ideditor).data("kendoEditor");
+                        newcontent = editor.value();
+                    }
+
+                    $.ajax({
+                        type: "POST",
+                        url: "/ContentManager/UpdateContent",
+                        data: {
+                            idcontenteditor: old_ideditor, textdata: newcontent, type: type_content
+                        },
+                        success: function (result) {
+                            var parent;
+                            if (type_content == 'content') {
+                                var txt = '#txt' + old_ideditor;
+                                $(txt).html(newcontent);
+                                parent = $('#hidden').val();
+                            }
+                            else if (type_content == 'moredetail') {
+                                parent = $('#morehidden').val();
+                            }
+
+                            $.ajax({
+                                type: "POST",
+                                url: "/ContentManager/Addcontentblock",
+                                data: {
+                                    idcontenteditor: parent, type: type_content
+                                },
+                                success: function (result) {
+                                    var child = 'child';
+                                    if (type_content == 'content') {
+                                        var data = '<div id="B' + result + '" class="hver" style="width:95%;"><div contentEditable id="topEditor' + result + '" style="width:auto; padding:0 5px 0 5px;"> </div><div id="block' + result + '" class="divblock" style="border:solid 1px #e5d9d9; padding:5px 5px 5px 5px; margin-top:5px; margin-bottom:5px; border-radius:5px;"><input onclick="ImgOpen(' + result + ')" type="button" value="Upload Images" style="border-radius:5px; height:30px; background-color:#56b755; color:white;" /><input ' +
+                                        'onclick="Delblock(' + result + ',\'child\')" type="button" value="ลบ" style="width:40px; height:30px; margin-right:3px; color:white; font-weight: bold; background-color:#56b755; border-radius: 5px; float:right;" /><input onclick="downblock(' + result + ')" type="button" value="ลง" style="width:40px; height:30px; margin-right:3px; color:white; font-weight: bold; background-color:#56b755; border-radius: 5px; float:right;" /><input onclick="upblock(' + result + ')"type="button" value="ขึ้น" style="width:40px; height:30px; margin-right:3px; color:white; font-weight: bold; background-color:#56b755; border-radius: 5px; float:right;" /><input onclick="appentblock(' + result + ')" type="button" value="เพิ่ม" style="width:40px; height:30px; margin-right:3px; color:white; font-weight: bold; background-color:#56b755; border-radius: 5px; float:right;" /></div></div>';
+                                        $("#editwindow").append(data);
+                                        var data2 = '<div id="preview' + result + '"><div style="clear: both; text-align: center;"><div id="type' + result + '"><a id="img' + result + '" class="fancybox" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"></a></div></div><div id="txt' + result + '">New Content</div><div style="clear: both;"></div></div>';
+                                        $("#allcontent").append(data2);
+                                        $("#topEditor" + result).kendoEditor({
+                                            select: onSelect,
+                                            tools: [
+                                            "bold",
+                                            "italic",
+                                            "underline",
+                                            "strikethrough",
+                                            "justifyLeft",
+                                            "justifyCenter",
+                                            "justifyRight",
+                                            "justifyFull",
+                                            "createLink",
+                                            "unlink",
+                                            "insertImage",
+                                            "createTable",
+                                            "addColumnLeft",
+                                            "addColumnRight",
+                                            "addRowAbove",
+                                            "addRowBelow",
+                                            "deleteRow",
+                                            "deleteColumn",
+                                            "viewHtml",
+                                            "foreColor",
+                                            "backColor"
+                                            ]
+                                        });
+                                    }
+                                    else if (type_content == 'moredetail') {
+                                        console.log(result);
+                                        var data = '<div id="S' + result + '" class="hver" style="width:95%;"><div contentEditable id="Editor' + result + '" style="width:auto; padding:0 5px 0 5px;"> </div><div id="block' + result + '" class="divblock" style="border:solid 1px #e5d9d9; padding:5px 5px 5px 5px; margin-top:5px; margin-bottom:5px; border-radius:5px;"><input onclick="ImgOpen(' + result + ')" type="button" value="Upload Images" style="border-radius:5px; height:30px; background-color:#e15613; color:white;" /><input ' +
+                                       'onclick="Delblock(' + result + ',\'child\')" type="button" value="ลบ" style="width:40px; height:30px; margin-right:3px; color:white; font-weight: bold; background-color:#e15613; border-radius: 5px; float:right;" /><input onclick="downblock(' + result + ')" type="button" value="ลง" style="width:40px; height:30px; margin-right:3px; color:white; font-weight: bold; background-color:#e15613; border-radius: 5px; float:right;" /><input onclick="upblock(' + result + ')"type="button" value="ขึ้น" ' +
+                                       'style="width:40px; height:30px; margin-right:3px; color:white; font-weight: bold; background-color:#e15613; border-radius: 5px; float:right;" /><input onclick="appentblock(' + result + ')" type="button" value="เพิ่ม" style="width:40px; height:30px; margin-right:3px; color:white; font-weight: bold; background-color:#e15613; border-radius: 5px; float:right;" /></div></div>';
+                                        $("#moreDetailData").append(data);
+
+                                        $("#Editor" + result).kendoEditor({
+                                            select: onSelect,
+                                            tools: [
+                                            "bold",
+                                            "italic",
+                                            "underline",
+                                            "strikethrough",
+                                            "justifyLeft",
+                                            "justifyCenter",
+                                            "justifyRight",
+                                            "justifyFull",
+                                            "createLink",
+                                            "unlink",
+                                            "insertImage",
+                                            "createTable",
+                                            "addColumnLeft",
+                                            "addColumnRight",
+                                            "addRowAbove",
+                                            "addRowBelow",
+                                            "deleteRow",
+                                            "deleteColumn",
+                                            "viewHtml",
+                                            "foreColor",
+                                            "backColor"
+                                            ]
+                                        });
+                                    }
+                                },
+                                error: function (req, status, error) {
+                                }
+                            });
+
+                        },
+                        error: function (req, status, error) {
+
+                        }
+                    });
+
+                }
+
+                function upblock(id) {
+                    var idcontenteditor, idcontenteditordes;
+                    var up, uppreview, pos
+                    if (type_content == 'content') {
+                        up = $("#B" + id).prev();
+                        uppreview = $("#preview" + id).prev();
+
+                        idcontenteditor = id;
+                        idcontenteditordes = up[0].id;
+
+                        idcontenteditordes = idcontenteditordes.substring(1);
+                        var check = $("#B" + idcontenteditordes).html();
+                        pos = check.indexOf('ลง');
+
+                        if (old_ideditor == undefined) {
+                            old_ideditor = id;
+                        }
+
+                        dataEditor = "#topEditor" + old_ideditor
+                        editor = $("#topEditor" + old_ideditor).data("kendoEditor");
+                        newcontent = editor.value();
+                    }
+                    else if (type_content == 'moredetail') {
+                        up = $("#S" + id).prev();
+
+                        idcontenteditor = id;
+                        idcontenteditordes = up[0].id;
+
+                        idcontenteditordes = idcontenteditordes.substring(1);
+                        var check = $("#S" + idcontenteditordes).html();
+                        pos = check.indexOf('ลง');
+
+                        if (old_ideditor == undefined) {
+                            old_ideditor = id;
+                        }
+
+                        dataEditor = "#Editor" + old_ideditor
+                        editor = $("#Editor" + old_ideditor).data("kendoEditor");
+                        newcontent = editor.value();
+                    }
+
+                    if (pos == -1) {
+                        alert('can not change position');
+                    }
+                    else {
+
+                        $.ajax({
+                            type: "POST",
+                            url: "/ContentManager/UpdateContent",
+                            data: {
+                                idcontenteditor: old_ideditor, textdata: newcontent, type: type_content
+                            },
+                            success: function (result) {
+                                if (type_content == 'content') {
+                                    var txt = '#txt' + old_ideditor;
+                                    $(txt).html(newcontent);
+                                }
+
+                                $.ajax({
+                                    type: "POST",
+                                    url: "/ContentManager/UpdateOrder",
+                                    data: {
+                                        idcontenteditor: idcontenteditor, idcontenteditordes: idcontenteditordes, type: type_content
+                                    },
+                                    success: function (result) {
+                                        if (type_content == 'content') {
+                                            $("#B" + id).after(up);
+                                            $("#preview" + id).after(uppreview)
+                                        }
+                                        else if (type_content == 'moredetail') {
+                                            $("#S" + id).after(up);
+                                        }
+
+                                        //$("#B" + id).after(up);
+                                        //$("#preview" + id).after(uppreview)
+                                    },
+                                    error: function (req, status, error) {
+
+                                    }
+                                });
+                            },
+                            error: function (req, status, error) {
+
+                            }
+                        });
+                    }
+
+                }
+
+                function downblock(id) {
+                    var idcontenteditor, idcontenteditordes;
+                    var down, downpreview
+                    if (type_content == 'content') {
+                        down = $("#B" + id).next();
+                        downpreview = $("#preview" + id).next();
+
+                        idcontenteditor = id;
+                        idcontenteditordes = down[0].id;
+
+                        idcontenteditordes = idcontenteditordes.substring(1);
+
+                        if (old_ideditor == undefined) {
+                            old_ideditor = id;
+                        }
+
+                        dataEditor = "#topEditor" + old_ideditor
+                        editor = $("#topEditor" + old_ideditor).data("kendoEditor");
+                        newcontent = editor.value();
+                    }
+                    else if (type_content == 'moredetail') {
+                        down = $("#S" + id).next();
+
+                        idcontenteditor = id;
+                        idcontenteditordes = down[0].id;
+
+                        idcontenteditordes = idcontenteditordes.substring(1);
+
+                        if (old_ideditor == undefined) {
+                            old_ideditor = id;
+                        }
+
+                        dataEditor = "#Editor" + old_ideditor
+                        editor = $("#Editor" + old_ideditor).data("kendoEditor");
+                        newcontent = editor.value();
+                    }
+
+
+                    $.ajax({
+                        type: "POST",
+                        url: "/ContentManager/UpdateContent",
+                        data: {
+                            idcontenteditor: old_ideditor, textdata: newcontent, type: type_content
+                        },
+                        success: function (result) {
+                            if (type_content == 'content') {
+                                var txt = '#txt' + idcontenteditor;
+                                $(txt).html(newcontent);
+                            }
+
+                            old_ideditor = idcontenteditor;
+
+                            $.ajax({
+                                type: "POST",
+                                url: "/ContentManager/UpdateOrder",
+                                data: {
+                                    idcontenteditor: idcontenteditor, idcontenteditordes: idcontenteditordes, type: type_content
+                                },
+                                success: function (result) {
+                                    if (type_content == 'content') {
+                                        $("#B" + id).before(down);
+                                        $("#preview" + id).before(downpreview)
+                                    }
+                                    else if (type_content == 'moredetail') {
+                                        $("#S" + id).before(down);
+                                    }
+
+                                },
+                                error: function (req, status, error) {
+
+                                }
+                            });
+                        },
+                        error: function (req, status, error) {
+
+                        }
+                    });
+
+
+                }
+
+                function ImgOpen(id) {
+                    if (old_ideditor == undefined) {
+                        old_ideditor = id;
+                    }
+
+                    if (type_content == 'content') {
+                        dataEditor = "#topEditor" + old_ideditor
+                        editor = $("#topEditor" + old_ideditor).data("kendoEditor");
+                        newcontent = editor.value();
+                    }
+                    else if (type_content == 'moredetail') {
+                        dataEditor = "#Editor" + old_ideditor
+                        editor = $("#Editor" + old_ideditor).data("kendoEditor");
+                        newcontent = editor.value();
+                    }
+
+                    $.ajax({
+                        type: "POST",
+                        url: "/ContentManager/UpdateContent",
+                        data: {
+                            idcontenteditor: old_ideditor, textdata: newcontent, type: type_content
+                        },
+                        success: function (result) {
+                            if (type_content == 'content') {
+                                var txt = '#txt' + old_ideditor;
+                                $(txt).html(newcontent);
+                            }
+
+                            ideditor = id;
+                            old_ideditor = id;
+
+                            $.ajax({
+                                type: "GET",
+                                url: "/ContentManager/SelectContent",
+                                data: {
+                                    idcontenteditor: ideditor, type: type_content
+                                },
+                                success: function (result) {
+                                    var JSONObject = result;
+                                    var imgdata = JSONObject[0].imgpath;
+                                    var imgposition = JSONObject[0].imgposition;
+                                    if (imgdata == null) {
+                                        $("#sizefield").attr('disabled', 'disabled');
+                                        $("#trickfield").attr('disabled', 'disabled');
+                                        $("#posfield").attr('disabled', 'disabled');
+
+                                        $("#deliamge").hide();
+                                        $('#previewimg').html("<center><h4>ลากและวางรูปภาพของคุณที่นี่</h4></center>");
+                                        $('#size2').prop('checked', true);
+                                    }
+                                    else {
+                                        $("#sizefield").removeAttr('disabled');
+                                        $("#trickfield").removeAttr('disabled');
+                                        $("#posfield").removeAttr('disabled');
+
+                                        $("#deliamge").show();
+                                        $('#previewimg').html("<img width='280' src='/ContentManager/Image?id=" + imgdata + "' />");
+                                        var size = JSONObject[0].imgpath.substring(0, 1);
+                                        if (size == "S") {
+                                            $('#size1').prop('checked', true);
+                                        }
+                                        else if (size == "M") {
+                                            $('#size2').prop('checked', true);
+                                        }
+                                        else if (size == "L") {
+                                            $('#size3').prop('checked', true);
+                                        }
+                                    }
+
+                                    if (imgposition == 1) {
+                                        $('#position1').prop('checked', true);
+                                    }
+                                    else if (imgposition == 2) {
+                                        $('#position2').prop('checked', true);
+                                    }
+                                    else if (imgposition == 3) {
+                                        $('#position3').prop('checked', true);
+                                    }
+                                    imgname = JSONObject[0].imgpath;
+
+
+                                    imgtrick = JSONObject[0].imgthickboxshow;
+                                    if (imgtrick == 1) {
+                                        $('#trickCheck').prop('checked', true);
+                                    }
+                                    else {
+                                        $('#trickCheck').prop('checked', false);
+                                    }
+
+
+
+                                },
+                                error: function (req, status, error) {
+
+                                }
+                            });
+                        },
+                        error: function (req, status, error) {
+
+                        }
+                    });
+
+
+                    kendoWindow3.open();
+                }
+
+                function onSelect(e) {
+                    var id = e.sender.body.id;
+                    if (id.indexOf('topEditor') != -1) {
+                        var type = 'content';
+                        id = id.substring(9)
+                        if (id != old_ideditor) {
+                            if (old_ideditor == undefined) {
+                                old_ideditor = id;
+                            }
+
+                            dataEditor = "#topEditor" + old_ideditor
+                            editor = $("#topEditor" + old_ideditor).data("kendoEditor");
+                            newcontent = editor.value();
+                            $.ajax({
+                                type: "POST",
+                                url: "/ContentManager/UpdateContent",
+                                data: {
+                                    idcontenteditor: old_ideditor, textdata: newcontent, type: type
+                                },
+                                success: function (result) {
+                                    var txt = '#txt' + old_ideditor;
+                                    $(txt).html(newcontent);
+                                    old_ideditor = id;
+                                },
+                                error: function (req, status, error) {
+
+                                }
+                            });
+
+                        }
+                    }
+                    else {
+                        id = id.substring(6)
+                        if (old_ideditor == undefined) {
+                            old_ideditor = id;
+                        }
+                        var type = 'moredetail';
+                        dataEditor = "#Editor" + old_ideditor
+                        editor = $("#Editor" + old_ideditor).data("kendoEditor");
+                        newcontent = editor.value();
+                        $.ajax({
+                            type: "POST",
+                            url: "/ContentManager/UpdateContent",
+                            data: {
+                                idcontenteditor: old_ideditor, textdata: newcontent, type: type
+                            },
+                            success: function (result) {
+                                old_ideditor = id;
+                            },
+                            error: function (req, status, error) {
+
+                            }
+                        });
+
+                    }
+
+                }
+
+                function onSuccess(e) {
+                    $(".k-upload-files.k-reset").find("li").remove();
+                    var imgdata = e.response.data.toString();
+                    var check = $("#trickCheck").prop('checked');
+                    if (check == true) {
+                        var path = "/ContentManager/Image?id=" + imgdata;
+                        $('#img' + ideditor).attr('href', path);
+                    }
+
+                    $('#previewimg').html("<img width='280' src='/ContentManager/Image?id=" + imgdata + "' />");
+                    if (type_content != 'moredetail') {
+                        $('#img' + ideditor).html("<img src='/ContentManager/Image?id=" + imgdata + "' />");
+                    }
+                    imgname = imgdata;
+                    var size = imgname.substring(0, 1);
+                    console.log(size);
+                    if (size == "S") {
+                        $('#size1').prop('checked', true);
+                    }
+                    else if (size == "M") {
+                        $('#size2').prop('checked', true);
+                    }
+                    else if (size == "L") {
+                        $('#size3').prop('checked', true);
+                    }
+
+                    $("#sizefield").removeAttr('disabled');
+                    $("#trickfield").removeAttr('disabled');
+                    $("#posfield").removeAttr('disabled');
+
+                    $("#deliamge").show();
+
+
+                }
+
+                function changePositon(position) {
+                    var textdata = $('#txt' + ideditor).html();
+                    var preview = "#preview" + ideditor;
+                    var check = $("#trickCheck").prop('checked');
+                    $.ajax({
+                        type: "POST",
+                        url: "/ContentManager/UpdatePosition",
+                        data: {
+                            idcontenteditor: ideditor, position: position, type: type_content
+                        },
+                        success: function (result) {
+                            if (type_content == 'content') {
+                                var content = '';
+                                if (position == 1) {
+                                    if (check == true) {
+                                        content = '<div style="clear: both; text-align: center;"><div id="type' + ideditor + '"><a href="/ContentManager/Image?id=' + imgname + '" id="img' + ideditor + '" class="fancybox" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="/ContentManager/Image?id=' + imgname + '" /></a></div></div><div id="txt' + ideditor + '">' + textdata + '</div><div style="clear: both;"></div>';
+                                    }
+                                    else {
+                                        content = '<div style="clear: both; text-align: center;"><div id="type' + ideditor + '"><div id="img' + ideditor + '" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="/ContentManager/Image?id=' + imgname + '" /></div></div></div><div id="txt' + ideditor + '">' + textdata + '</div><div style="clear: both;"></div>';
+                                    }
+                                    $(preview).html(content);
+                                }
+                                else if (position == 2) {
+                                    if (check == true) {
+                                        content = '<div style="clear: both; text-align: center;"><div id="type' + ideditor + '"><a href="/ContentManager/Image?id=' + imgname + '" id="img' + ideditor + '" class="fancybox" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="/ContentManager/Image?id=' + imgname + '" /></a></div></div><div id="txt' + ideditor + '">' + textdata + '</div><div style="clear: both;"></div>';
+                                    }
+                                    else if (check == false) {
+                                        content = '<div style="clear: both; text-align: center;"><div id="type' + ideditor + '"><div id="img' + ideditor + '" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="/ContentManager/Image?id=' + imgname + '" /></div></div></div><div id="txt' + ideditor + '">' + textdata + '</div><div style="clear: both;"></div>';
+                                    }
+                                    $(preview).html(content);
+
+                                }
+                                else if (position == 3) {
+                                    if (check == true) {
+                                        content = '<div style="clear: both; text-align: center;"><div id="type' + ideditor + '"><a href="/ContentManager/Image?id=' + imgname + '" id="img' + ideditor + '" class="fancybox" style="clear: left; float: right; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="/ContentManager/Image?id=' + imgname + '" /></a></div></div><div id="txt' + ideditor + '">' + textdata + '</div><div style="clear: both;"></div>';
+                                    }
+                                    else if (check == false) {
+                                        content = '<div style="clear: both; text-align: center;"><div id="type' + ideditor + '"><div id="img' + ideditor + '" style="clear: left; float: right; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="/ContentManager/Image?id=' + imgname + '" /></div></div></div><div id="txt' + ideditor + '">' + textdata + '</div><div style="clear: both;"></div>';
+                                    }
+                                    $(preview).html(content);
+                                }
+                            }
+
+                        },
+                        error: function (req, status, error) {
+
+                        }
+                    });
+
+                }
+
+                function changeSize(size) {
+
+                    var imgpath = imgname.substring(1);
+                    var check = $("#trickCheck").prop('checked');
+                    imgpath = size + imgpath;
+                    $.ajax({
+                        type: "POST",
+                        url: "/ContentManager/UpdateSize",
+                        data: {
+                            idcontenteditor: ideditor, size: size, imgpath: imgpath, type: type_content
+                        },
+                        success: function (result) {
+                            if (type_content == "content") {
+                                $('#img' + ideditor).html("<img src='/ContentManager/Image?id=" + imgpath + "' />");
+                                if (check == true) {
+                                    var path = "/ContentManager/Image?id=" + imgpath;
+                                    $('#img' + ideditor).attr('href', path);
+                                }
+                            }
+                            imgname = imgpath;
+                        },
+                        error: function (req, status, error) {
+
+                        }
+                    });
+                }
+
+                function trick() {
+                    var check = $("#trickCheck").prop('checked');
+                    $.ajax({
+                        type: "POST",
+                        url: "/ContentManager/UpdateTrickbox",
+                        data: {
+                            idcontenteditor: ideditor, check: check, type: type_content
+                        },
+                        success: function (result) {
+                            if (type_content == 'content') {
+                                if (check == true) {
+                                    var imgcontent = $('#type' + ideditor).html();
+                                    imgcontent = imgcontent.replace("<div", "<a href='/ContentManager/Image?id=" + imgname + "' class='fancybox' ");
+                                    imgcontent = imgcontent.replace("</div>", "</a>");
+                                    $('#type' + ideditor).html(imgcontent);
+                                }
+                                else if (check == false) {
+                                    $('#img' + ideditor).removeClass('fancybox').removeAttr('href');
+                                    var imgcontent = $('#type' + ideditor).html();
+                                    imgcontent = imgcontent.replace("<a", "<div");
+                                    imgcontent = imgcontent.replace("</a>", "</div>");
+
+                                    $('#type' + ideditor).html(imgcontent);
+                                }
+                            }
+                        },
+                        error: function (req, status, error) {
+
+                        }
+                    });
+                }
+
+
+                function checkMore() {
+
+                    var check = $("#moredetail").prop('checked');
+                    if (check == true) {
+
+                        if (old_ideditor == undefined) {
+                            var parent = $('#hidden').val();
+                            $.ajax({
+                                type: "POST",
+                                url: "/ContentManager/AddMoreDetail",
+                                data: {
+                                    idcontenteditor: parent
+                                },
+                                success: function (result) {
+                                    var html = result.split('<....>');
+                                    type_content = 'moredetail';
+                                    $('#moreDetailData').html(html[0]);
+                                    $('#appendscript').html(html[1]);
+                                    if (html[2] == '1') {
+                                        $("#linktype1").prop('checked', true);
+                                    }
+                                    else if (html[2] == '2') {
+                                        $("#linktype2").prop('checked', true);
+                                    }
+
+                                    $('#more').removeAttr('style');
+                                    tabcontent.select(getItem(1));
+                                },
+                                error: function (req, status, error) {
+
+                                }
+                            });
+
+                        }
+                        else {
+                            dataEditor = "#topEditor" + old_ideditor
+                            editor = $("#topEditor" + old_ideditor).data("kendoEditor");
+                            newcontent = editor.value();
+
+                            $.ajax({
+                                type: "POST",
+                                url: "/ContentManager/UpdateContent",
+                                data: {
+                                    idcontenteditor: old_ideditor, textdata: newcontent, type: type_content
+                                },
+                                success: function (result) {
+
+                                    var txt = '#txt' + old_ideditor;
+                                    $(txt).html(newcontent);
+                                    old_ideditor = undefined;
+                                    var parent = $('#hidden').val();
+                                    type_content = 'moredetail';
+                                    $.ajax({
+                                        type: "POST",
+                                        url: "/ContentManager/AddMoreDetail",
+                                        data: {
+                                            idcontenteditor: parent
+                                        },
+                                        success: function (result) {
+                                            var html = result.split('<....>');
+                                            $('#moreDetailData').html(html[0]);
+                                            $('#appendscript').html(html[1]);
+                                            if (html[2] == '1') {
+                                                $("#linktype1").prop('checked', true);
+                                            }
+                                            else if (html[2] == '2') {
+                                                $("#linktype2").prop('checked', true);
+                                            }
+
+                                            $('#more').removeAttr('style');
+                                            tabcontent.select(getItem(1));
+                                        },
+                                        error: function (req, status, error) {
+
+                                        }
+                                    });
+                                },
+                                error: function (req, status, error) {
+
+                                }
+                            });
+
+                        }
+                    }
+                    else {
+
+                        if (old_ideditor == undefined) {
+                            type_content = 'content';
+                            $('#more').attr('style', 'display:none');
+                            $('#moredetailshow').html('');
+                            tabcontent.select(getItem(0));
+
+                        }
+                        else {
+
+                            dataEditor = "#Editor" + old_ideditor
+                            editor = $("#Editor" + old_ideditor).data("kendoEditor");
+                            newcontent = editor.value();
+                            console.log(newcontent);
+                            $.ajax({
+                                type: "POST",
+                                url: "/ContentManager/UpdateContent",
+                                data: {
+                                    idcontenteditor: old_ideditor, textdata: newcontent, type: type_content
+                                },
+                                success: function (result) {
+                                    old_ideditor = undefined;
+                                    type_content = 'content';
+                                    $('#more').attr('style', 'display:none');
+                                    $('#moredetailshow').html('');
+                                    tabcontent.select(getItem(0));
+                                },
+                                error: function (req, status, error) {
+
+                                }
+                            });
+
+                        }
+                        //$('#more').attr('style', 'display:none');
+                        //tabcontent.select(getItem(0));
+                    }
+
+                }
+
+                function getItem(target) {
+
+                    return tabcontent.tabGroup.children("li").eq(target);
+                }
+
+                function onSelectTab(e) {
+                    var i = e.item.innerText;
+                    if (i == 'พิมพ์ข้อความ') {
+                        if (old_ideditor != undefined) {
+
+                            dataEditor = "#Editor" + old_ideditor
+                            editor = $("#Editor" + old_ideditor).data("kendoEditor");
+                            newcontent = editor.value();
+                            $.ajax({
+                                type: "POST",
+                                url: "/ContentManager/UpdateContent",
+                                data: {
+                                    idcontenteditor: old_ideditor, textdata: newcontent, type: type_content
+                                },
+                                success: function (result) {
+                                    old_ideditor = undefined;
+                                    type_content = 'content';
+                                },
+                                error: function (req, status, error) {
+
+                                }
+                            });
+                        }
+
+                    }
+                    else if (i == 'รายละเอียด') {
+                        if (old_ideditor != undefined) {
+
+                            dataEditor = "#topEditor" + old_ideditor
+                            editor = $("#topEditor" + old_ideditor).data("kendoEditor");
+                            newcontent = editor.value();
+                            $.ajax({
+                                type: "POST",
+                                url: "/ContentManager/UpdateContent",
+                                data: {
+                                    idcontenteditor: old_ideditor, textdata: newcontent, type: type_content
+                                },
+                                success: function (result) {
+                                    var txt = '#txt' + old_ideditor;
+                                    type_content = 'moredetail';
+                                    $(txt).html(newcontent);
+                                    old_ideditor = undefined;
+
+                                },
+                                error: function (req, status, error) {
+
+                                }
+                            });
+                        }
+                    }
+                }
+
+                function ClickSEO() {
+                    var idcontenteditordetail = $('#morehidden').val();
+                    $.ajax({
+                        type: "GET",
+                        url: "/ContentManager/SelectSeo",
+                        data: {
+                            idcontenteditor: idcontenteditordetail
+                        },
+                        success: function (result) {
+                            var JSONObject = result;
+                            if (JSONObject[0] != null) {
+                                $('#title').val(JSONObject[0].title);
+                                $('#keyword').val(JSONObject[0].keywords);
+                                $('#description').val(JSONObject[0].description);
+                                $('#rewrite').val(JSONObject[0].urlrewrite);
+                            }
+                            else {
+                            }
+                            kendoWindow4.open();
+
+                        },
+                        error: function (req, status, error) {
+
+                        }
+                    });
+                }
+
+                function seoConfirm() {
+                    var idcontenteditordetail = $('#morehidden').val();
+                    var title = $('#title').val();
+                    var keyword = $('#keyword').val();
+                    var descrip = $('#description').val();
+                    var urlrewrite = $('#rewrite').val();
+
+                    $.ajax({
+                        type: "POST",
+                        url: "/ContentManager/AddSeo",
+                        data: {
+                            title: title, keyword: keyword, description: descrip, urlrewrite: urlrewrite, idcontenteditor: idcontenteditordetail
+                        },
+                        success: function (result) {
+                            if (result == 'Success') {
+                                $('#title').val(title);
+                                $('#keyword').val(keyword);
+                                $('#description').val(descrip);
+                                $('#rewrite').val(urlrewrite);
+                            }
+                        },
+                        error: function (req, status, error) {
+
+                        }
+                    });
+                }
+
+                function changelinktype(linktype) {
+                    var idcontenteditordetail = $('#morehidden').val();
+                    $.ajax({
+                        type: "POST",
+                        url: "/ContentManager/UpdateLinkType",
+                        data: {
+                            idcontenteditordetail: idcontenteditordetail, linktypevalue: linktype
+                        },
+                        success: function (result) {
+
+                        },
+                        error: function (req, status, error) {
+
+                        }
+                    });
+                }
+
+                function ShowImgIcon() {
+                    $('#img_icon').toggle(600);
+                }
+
+
+                </script>
+
+ 
+    
+<div style="margin:20px 0 150px 300px;">
+    <div id="window" >
+       <div id="content1" style="margin:auto;">
+                     
+       </div>
+    </div>
+</div>   
+ 
+<div style="height:auto;">
+<div id="window2" >
+     <input type="checkbox" id="moredetail" onchange="checkMore()"/>MoreDatail
+    @*<input type="button" id="moredetail" onchange="checkMore()"/>*@
+    <br />
+    <div id="tabcontent" style="margin-bottom:5px;">
+                    <ul>
+                        <li class="k-state-active">
+                           พิมพ์ข้อความ
+                        </li>
+                        <li id="more" style="display:none">
+                           รายละเอียด
+                        </li>
+                    </ul>
+         <div>
+             <div id="editwindow">
+                @Html.Raw(ViewBag.drawEdit)
+            </div>
+         </div>
+        <div>
+            <br />
+             <div class="TabSEO" style="border:solid 1px #e5d9d9; padding:5px 5px 5px 5px; margin:auto; border-radius:5px; width:95%;height:30px">
+                   <input type="radio" id="linktype1" name="linktype" onchange="changelinktype(1)"/>ต่อท้ายคำ  
+                   <input type="radio" id="linktype2" name="linktype" onchange="changelinktype(2)"/>ขึ้นบรรทัดใหม่ 
+                   <input onclick="ClickSEO();" type="button" value="SEO" style="border-radius:5px; width:50px;margin-left:10px; height:30px; float:right;" />
+            </div>
+            <br />
+              <div class="TabSEO" style="border:solid 1px #e5d9d9; padding:5px 5px 5px 5px; margin:auto; border-radius:5px; width:95%">
+                   <input type="button" id="imgicon" value="Select ImgIcon" class="k-button" onclick="ShowImgIcon()"/>
+            </div>
+            <br />
+            <div id="img_icon" style="display:none">
+                  <div id="listView"></div>
+            </div>
+            <br />
+            <div id="moreDetailData">
+                
+            </div>
+        </div>
+    </div>
+   
+</div>   
+</div>
+
+
+    
+<div id="seowindow">
+    <div id="detailSEO">
+              <table cellpadding="2" cellspacing="2" border="0" class="font">
+                 <tbody>
+                     <tr>
+                         <td rowspan="2" align="right">&nbsp;</td>
+                         <td>ชื่อหัวข้อของเพจ (Title)</td>
+                      </tr>
+                      <tr>
+                         <td><input class="font" name="Title" type="text" id="title" /></td>
+                      </tr>
+                      <tr>
+                         <td rowspan="2" align="right">&nbsp;</td>
+                         <td>คำค้นหาใช้ ,เพื่อแยกคำ(Keyword)</td>
+                      </tr>
+                      <tr>
+                         <td><input class="font"  name="Keyword" type="text" id="keyword" /></td>
+                      </tr>
+                      <tr>
+                         <td rowspan="4" align="right">&nbsp;</td>
+                         <td>คำอธิบายหน้า(Description)</td>
+                       </tr>
+                       <tr>
+                          <td><textarea  name="Discription" rows="4" cols="45" id="description" style="border-radius:5px; border-color:#e5d9d9;"></textarea></td>
+                       </tr>
+                       <tr>
+                          <td>URL Rewrite :</td>
+                      </tr>
+                      <tr>
+                          <td><input class="font"  name="Rewrite" type="text" id="rewrite" /></td>
+                      </tr>
+                     <tr>
+                         <td>&nbsp;</td>
+                         <td><input type="button" onclick="seoConfirm()" class="k-button" name="ok" value="ตกลง" /></td>
+                     </tr>
+                    </tbody>
+                 </table>
+              </div>
+</div>
+
+<div id="windowupload" style="width:685px">
+        <div style="display:inline-table;">
+        <div id="previewimg" style="color:#888; margin:10px 10px 10px 10px; border: dashed 2px #e5d9d9; border-radius: 5px; width:280px; ">
+            <center>
+                <h4>ลากและวางรูปภาพของคุณที่นี่</h4>
+            </center>
+        </div>
+         <fieldset id="sizefield" style="border-radius:5px; margin-bottom:5px; width:225px; margin:auto">
+                <legend>ขนาดภาพ</legend> 
+                <input type="radio" id="size1" name="size" onchange="changeSize('S')"/>เล็ก 
+                <input type="radio" id="size2" name="size" onchange="changeSize('M')"/>กลาง  
+                <input type="radio" id="size3" name="size" onchange="changeSize('L')"/>ใหญ่
+            </fieldset>
+         <fieldset id="trickfield" style="border-radius:5px; margin-bottom:5px; width:225px; margin:auto">
+                <legend>TrickBox Setting</legend> 
+                <input type="checkbox" id="trickCheck" name="trick" onchange="trick()"/>ใช้ 
+            </fieldset>
+        </div>
+        <div style="font-size:14px; margin:10px 10px 10px 10px; float:right; border:solid 1px #e5d9d9; padding:10px 10px 10px 10px;border-radius:5px;">
+            <fieldset id="posfield" style="border-radius:5px; margin-bottom:5px; width:225px;">
+                <legend>ตำแหน่งภาพ</legend>
+                <input type="radio" id="position1" name="position" onchange="changePositon(1)"/>ซ้าย 
+                <input type="radio" id="position2" name="position" onchange="changePositon(2)"/>กลาง  
+                <input type="radio" id="position3" name="position" onchange="changePositon(3)"/>ขวา
+            </fieldset>
+            <input style="width:90px;height:35px" type="file" name="displayImage" id="files" /><br />
+            <font size="2" color="#888">
+                <li>เฉพาะไฟล์ภาพ jpg, jpeg, png </li>
+                <li>ระบบจะย่อภาพให้อัตโนมัติ</li>
+            </font><br />
+            <input type="button" class="k-button" value="DeleteImage" id="deliamge"/>
+            
+          </div>
+
+</div>   
+
+<div id="body">
+        <div id="slide-in-share" style="z-index:9999999">
+            <a id="slide-in-handle"  href="#">Share</a>
+             
+            <div class="demo-section">
+               
+            </div>
+        </div>
+        
+        <div id="slide-in-share2" style="z-index:9999999">
+            <a id="slide-in-handle2" href="#">Share2</a>
+               
+       <div style=" width:100%;  background:#fff;">  
+        <div style="border:solid 1px #e5d9d9;">
+            <div id="example" class="k-content">
+            <div id="forecast">
+                <div id="tabstrip">
+                    <ul>
+                        <li class="k-state-active">
+                            Content
+                        </li>
+                        <li>
+                            Layout
+                        </li>
+                       
+                    </ul>
+                    <div>
+                        <div class="weather">
+                            <div style="background:#fff;  width:100%;">
+                                <div style=" background:#e7e7e7; padding:8px 0 0 20px;  height:25px; ">
+                                    <b>Content</b>
+                                </div>
+                                <div style="height:200px;  overflow-y: scroll; scrollbar-arrow-color:blue; scrollbar-face-color: #e7e7e7; scrollbar-3dlight-color: #a0a0a0; scrollbar-darkshadow-color:#888888;">
+
+                                    <div class="undo" onclick="selectType(1)" style="padding: 3px 10px 0 3px;  height:40px; margin:10px 0 5px 0; display:inline-table;">
+                                        <a href="#"><img src="~/Images/content/text.png" width="60" height="40"/></a>
+                                        <div style="float:right; padding:10px 0 0 5px;">Content Block</div> 
+                                    </div>
+                                    <div class="undo" onclick="selectType(2)" style="padding: 3px 10px 0 3px; height:40px; margin:5px 0 5px 0; display:inline-table;">
+                                        <a href="#"><img src="~/Images/content/fileUpload.png" width="60" height="40"/></a>
+                                        <div style="float:right; padding:10px 0 0 5px;">Images</div> 
+                                    </div>
+                                    <div class="undo" onclick="selectType(3)" style="padding: 3px 10px 0 3px; height:40px; margin:5px 0 5px 0; display:inline-table;">
+                                        <a href="#"><img src="~/Images/content/fileUpload.png" width="60" height="40"/></a>
+                                        <div style="float:right; padding:10px 0 0 5px;">Images Gallery</div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="rainy">&nbsp;</span>
+                    </div>
+                    <div>
+                        <div class="weather">
+                          <div style="background:#fff;  width:100%;">
+                                <div style="border:solid 1px #e5e5e5;  background:#e7e7e7; padding:10px 0 0 30px;  height:25px; ">
+                                    <b>Layout</b>
+                                </div>
+                                <div style="height:200px;  overflow-y: scroll; scrollbar-arrow-color:blue; scrollbar-face-color: #e7e7e7; scrollbar-3dlight-color: #a0a0a0; scrollbar-darkshadow-color:#888888;">
+                                    <div style=" height:40px; margin:10px 0 5px 0; display:inline-table;">
+                                        <img src="~/Images/layout/default.jpg" width="60" height="40"/>
+                                        <div style="float:right; padding:10px 0 0 5px;">100%</div> 
+                                    </div>
+                                    <div style=" height:40px; margin:5px 0 5px 0; display:inline-table;">
+                                       <img src="~/Images/layout/midle.jpg" width="60" height="40"/>
+                                        <div style="float:right; padding:10px 0 0 5px;">50% + 50%</div> 
+                                    </div>
+                                    <div style=" height:40px; margin:5px 0 5px 0; display:inline-table;">
+                                       <img src="~/Images/layout/left.jpg" width="60" height="40" />
+                                        <div style="float:right; padding:10px 0 0 5px;">25% + 75%</div> 
+                                    </div>
+                                    <div style=" height:40px; margin:5px 0 5px 0; display:inline-table;">
+                                       <img src="~/Images/layout/right.jpg" width="60" height="40" />
+                                        <div style="float:right; padding:10px 0 0 5px;">75% + 25%</div> 
+                                    </div>
+                                    <div style=" height:40px; margin:5px 0 5px 0; display:inline-table;">
+                                       <img src="~/Images/layout/left_menu.jpg" width="60" height="40"/>
+                                        <div style="float:right; padding:10px 0 0 5px;">Left Menu</div> 
+                                    </div>
+                                    <div style="height:40px; margin:5px 0 5px 0; display:inline-table;">
+                                       <img src="~/Images/layout/right_menu.jpg" width="60" height="40"/>
+                                        <div style="float:right; padding:10px 0 0 5px;">Right Menu</div> 
+                                    </div>
+                                    <div style=" height:40px; margin:5px 0 5px 0; display:inline-table;">
+                                       <img src="~/Images/layout/two_colum.jpg" width="60" height="40" />
+                                        <div style="float:right; padding:10px 0 0 5px;">1 - 2 - 1 แถว</div> 
+                                    </div>
+                                        <div style=" height:40px; margin:5px 0 5px 0; display:inline-table;">
+                                       <img src="~/Images/layout/all.jpg" width="60" height="40"/>
+                                       <div style="float:right; padding:10px 0 0 5px;">25% + 50% + 25%</div> 
+                                    </div>
+                                </div>
+                              <div style="border:solid 1px #e5e5e5; background:#e7e7e7; padding:8px 0 0 20px;  height:25px; ">
+                                    <b>Templeat</b>
+                              </div>
+                              <div style=" padding:5px 0 0 0; ">
+                                    <div style="padding:30px 0 0 30px; width:80px; height:50px; border:solid 1px #c36103; background:#f7ad38;">
+                                        Custom
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <span class="sunny">&nbsp;</span>
+                        </div>
+                    </div>
+                 </div>
+               </div>
+            </div>
+         </div>
+                    
+        </div>
+    
+        <div class="bg" style="background:#fff; margin-bottom:5px;">  
+           <div id="allcontent">
+                @Html.Raw(ViewBag.draw) 
+           </div>
+           <div id="moredetailshow">
+               @Html.Raw(ViewBag.drawMoreDetail) 
+           </div>
+           <div style="text-align:center">
+                <input type="button" id="EditContent" value="editContent" class="k-button" style="width:100px"/>
+            </div>
+
+        </div>  
+
+        <div id="scripttheme">
+            
+        </div>
+</div>
+
+
+
+
+

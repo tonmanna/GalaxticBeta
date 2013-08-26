@@ -1,0 +1,34 @@
+﻿@model GalacticNebula.Models.showContentEditor
+
+<div id="preview@(Model.id)">
+<div style="clear: both; text-align: center;">
+
+        @if (Model.trick == "1")
+        {
+            if (Model.imgpath == null)
+            {
+                @Html.Raw("<div id='type" + Model.id + "'><a id='img" + Model.id + "' class='fancybox' style='clear: left; float: left; margin-bottom: 1em; margin-right: 1em;'></a></div>");
+            }
+            else
+            {
+                @Html.Raw("<div id='type" + Model.id + "'><a href='" + Url.Content("~/ContentManager/Image?id=" + Model.imgpath) + "' id='img" + Model.id + "'  class='fancybox' style='clear: left; float: left; margin-bottom: 1em; margin-right: 1em;'><img border='0' src='" + Url.Content("~/ContentManager/Image?id=" + Model.imgpath) + "' /></a></div>");
+            }   
+       
+        }
+        else
+        {
+            if (Model.imgpath == null)
+            {
+                @Html.Raw("<div id='type" + Model.id + "'><div id='img" + Model.id + "' style='clear: left; float: left; margin-bottom: 1em; margin-right: 1em;'></div></div>");
+            }
+            else
+            {
+                @Html.Raw("<div id='type"+Model.id+"'><div id='img" + Model.id + "' style='clear: left; float: left; margin-bottom: 1em; margin-right: 1em;'><img border='0' src='" + Url.Content("~/ContentManager/Image?id=" + Model.imgpath) + "' /></div></div>");
+            }
+        }
+
+</div>
+<div id="txt@(Model.id)">@Html.Raw(Model.text)</div>
+<div style="clear: both;"></div>
+</div>
+   

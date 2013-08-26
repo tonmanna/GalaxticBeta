@@ -1,0 +1,21 @@
+﻿@model GalacticNebula.Models.showContentEditor
+<div id="S@(Model.id)" class="hver" style="width:95%;">   
+       <div contentEditable id="Editor@(Model.id)" style="width:auto; padding:0 5px 0 5px;">
+           @Html.Raw(Model.text)
+       </div>
+       <div id="block@(Model.id)" class="divblock" style="border:solid 1px #e5d9d9; padding:5px 5px 5px 5px; margin-top:5px; margin-bottom:5px; border-radius:5px;">
+            <input onclick="ImgOpen(@(Model.id))" type="button" value="Upload Images" style="border-radius:5px; height:30px; background-color:#e15613; color:white;" />
+            
+         @if (Model.order != 1)
+         {
+              <input onclick="Delblock(@(Model.id),'child')" type="button" value="ลบ" style="width:40px; height:30px; margin-right:3px; color:white; font-weight: bold; background-color:#e15613; border-radius: 5px; float:right;" />
+              <input onclick="downblock(@(Model.id))" type="button" value="ลง" style="width:40px; height:30px; margin-right:3px; color:white; font-weight: bold; background-color:#e15613; border-radius: 5px; float:right;" />
+              <input onclick="upblock(@(Model.id))"type="button" value="ขึ้น" style="width:40px; height:30px; margin-right:3px; color:white; font-weight: bold; background-color:#e15613; border-radius: 5px; float:right;" />  
+         }
+         else
+         {
+              <input onclick="Delblock(@(Model.id),'parent')" type="button" value="ลบ" style="width:40px; height:30px; margin-right:3px; color:white; font-weight: bold; background-color:#e15613; border-radius: 5px; float:right;" />
+         }
+             <input onclick="appentblock(@(Model.id))" type="button" value="เพิ่ม" style="width:40px; height:30px; margin-right:3px; color:white; font-weight: bold; background-color:#e15613; border-radius: 5px; float:right;" />
+          </div>
+    </div>
