@@ -1,0 +1,325 @@
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\GalacticNebula.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\GalacticNebula.pdb
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\Antlr3.Runtime.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.AspNet.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.Core.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.OAuth.Consumer.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.OAuth.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.OpenId.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\EntityFramework.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\Kendo.Mvc.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\Microsoft.Data.Edm.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\Microsoft.Data.OData.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\Microsoft.Practices.ServiceLocation.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\Microsoft.Practices.Unity.Configuration.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\Microsoft.Practices.Unity.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\Microsoft.Web.Infrastructure.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\Newtonsoft.Json.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\System.Net.Http.Formatting.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\System.Spatial.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\System.Web.Helpers.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\System.Web.Http.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\System.Web.Http.OData.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\System.Web.Http.WebHost.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\System.Web.Mvc.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\System.Web.Optimization.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\System.Web.Razor.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\System.Web.WebPages.Deployment.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\System.Web.WebPages.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\System.Web.WebPages.Razor.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\Unity.Mvc4.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\WebGrease.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\WebMatrix.Data.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\WebMatrix.WebData.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\Kendo.Mvc.xml
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\Microsoft.Practices.ServiceLocation.pdb
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\Microsoft.Practices.ServiceLocation.xml
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\Microsoft.Practices.Unity.xml
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\Microsoft.Practices.Unity.Configuration.xml
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\System.Web.Helpers.xml
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\System.Web.Mvc.xml
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\System.Web.Razor.xml
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\System.Web.WebPages.xml
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\System.Web.WebPages.Deployment.xml
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\System.Web.WebPages.Razor.xml
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\EntityFramework.xml
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\Newtonsoft.Json.xml
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\System.Net.Http.Formatting.xml
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\System.Web.Http.xml
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\System.Web.Http.WebHost.xml
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\WebMatrix.Data.xml
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\WebMatrix.WebData.xml
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.AspNet.xml
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.Core.xml
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.OAuth.Consumer.xml
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.OAuth.xml
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.OpenId.xml
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\System.Web.Http.OData.xml
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\Microsoft.Data.Edm.xml
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\Microsoft.Data.OData.xml
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\System.Spatial.xml
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\bg-BG\Kendo.Mvc.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\da-DK\Kendo.Mvc.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\de-DE\Kendo.Mvc.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\es-ES\Kendo.Mvc.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\fr-FR\Kendo.Mvc.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\nl-NL\Kendo.Mvc.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\pl-PL\Kendo.Mvc.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\pt-BR\Kendo.Mvc.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\pt-PT\Kendo.Mvc.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\ro-RO\Kendo.Mvc.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\ru-RU\Kendo.Mvc.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\sv-SE\Kendo.Mvc.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\uk-UA\Kendo.Mvc.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\zh-CN\Kendo.Mvc.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\de\Microsoft.Data.Edm.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\es\Microsoft.Data.Edm.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\fr\Microsoft.Data.Edm.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\it\Microsoft.Data.Edm.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\ja\Microsoft.Data.Edm.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\ko\Microsoft.Data.Edm.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\ru\Microsoft.Data.Edm.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\de\Microsoft.Data.OData.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\es\Microsoft.Data.OData.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\fr\Microsoft.Data.OData.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\it\Microsoft.Data.OData.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\ja\Microsoft.Data.OData.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\ko\Microsoft.Data.OData.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\ru\Microsoft.Data.OData.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\de\System.Spatial.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\es\System.Spatial.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\fr\System.Spatial.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\it\System.Spatial.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\ja\System.Spatial.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\ko\System.Spatial.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\ru\System.Spatial.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\zh-Hans\System.Spatial.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\bin\zh-Hant\System.Spatial.resources.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\obj\Debug\GalacticNebula.dll
+E:\Project\Galactic\GalacticNebula\GalacticNebula\obj\Debug\GalacticNebula.pdb
+E:\Project\Galactic\GalacticNebula\GalacticNebula\obj\Debug\GalacticNebula.csprojResolveAssemblyReference.cache
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\GalacticNebula.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\GalacticNebula.pdb
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Antlr3.Runtime.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.Core.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\EntityFramework.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Kendo.Mvc.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Microsoft.Data.Edm.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Microsoft.Data.OData.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Microsoft.Practices.Unity.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Newtonsoft.Json.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Net.Http.Formatting.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Spatial.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.Helpers.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.Http.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.Http.OData.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.Http.WebHost.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.Mvc.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.Optimization.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.Razor.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.WebPages.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.WebPages.Razor.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Unity.Mvc4.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\WebGrease.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\WebMatrix.Data.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\WebMatrix.WebData.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Kendo.Mvc.xml
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Microsoft.Practices.Unity.xml
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.Helpers.xml
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.Mvc.xml
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.Razor.xml
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.WebPages.xml
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.WebPages.Razor.xml
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\EntityFramework.xml
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Newtonsoft.Json.xml
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Net.Http.Formatting.xml
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.Http.xml
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.Http.WebHost.xml
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\WebMatrix.Data.xml
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\WebMatrix.WebData.xml
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.Core.xml
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.Http.OData.xml
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Microsoft.Data.Edm.xml
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Microsoft.Data.OData.xml
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Spatial.xml
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\bg-BG\Kendo.Mvc.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\da-DK\Kendo.Mvc.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\de-DE\Kendo.Mvc.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\es-ES\Kendo.Mvc.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\fr-FR\Kendo.Mvc.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\nl-NL\Kendo.Mvc.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\pl-PL\Kendo.Mvc.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\pt-BR\Kendo.Mvc.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\pt-PT\Kendo.Mvc.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\ro-RO\Kendo.Mvc.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\ru-RU\Kendo.Mvc.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\sv-SE\Kendo.Mvc.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\uk-UA\Kendo.Mvc.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\zh-CN\Kendo.Mvc.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\de\System.Spatial.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\es\System.Spatial.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\fr\System.Spatial.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\it\System.Spatial.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\ja\System.Spatial.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\ko\System.Spatial.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\ru\System.Spatial.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\obj\Debug\GalacticNebula.csprojResolveAssemblyReference.cache
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\obj\Debug\GalacticNebula.dll
+C:\Users\Windows 8\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\obj\Debug\GalacticNebula.pdb
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\GalacticNebula.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\GalacticNebula.pdb
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Antlr3.Runtime.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.Core.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\EntityFramework.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Kendo.Mvc.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Microsoft.Data.Edm.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Microsoft.Data.OData.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Microsoft.Practices.Unity.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\MongoDB.Bson.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\MongoDB.Driver.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Newtonsoft.Json.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Net.Http.Formatting.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Spatial.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.Helpers.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.Http.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.Http.OData.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.Http.WebHost.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.Mvc.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.Optimization.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.Razor.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.WebPages.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.WebPages.Razor.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Unity.Mvc4.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\WebGrease.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\WebMatrix.Data.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\WebMatrix.WebData.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Kendo.Mvc.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Microsoft.Practices.Unity.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\MongoDB.Bson.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\MongoDB.Driver.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.Helpers.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.Mvc.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.Razor.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.WebPages.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.WebPages.Razor.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\EntityFramework.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Newtonsoft.Json.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Net.Http.Formatting.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.Http.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.Http.WebHost.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\WebMatrix.Data.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\WebMatrix.WebData.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.Core.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Web.Http.OData.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Microsoft.Data.Edm.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\Microsoft.Data.OData.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\System.Spatial.xml
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\bg-BG\Kendo.Mvc.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\da-DK\Kendo.Mvc.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\de-DE\Kendo.Mvc.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\es-ES\Kendo.Mvc.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\fr-FR\Kendo.Mvc.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\nl-NL\Kendo.Mvc.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\pl-PL\Kendo.Mvc.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\pt-BR\Kendo.Mvc.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\pt-PT\Kendo.Mvc.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\ro-RO\Kendo.Mvc.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\ru-RU\Kendo.Mvc.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\sv-SE\Kendo.Mvc.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\uk-UA\Kendo.Mvc.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\zh-CN\Kendo.Mvc.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\de\System.Spatial.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\es\System.Spatial.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\fr\System.Spatial.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\it\System.Spatial.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\ja\System.Spatial.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\ko\System.Spatial.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\ru\System.Spatial.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\obj\Debug\GalacticNebula.dll
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\obj\Debug\GalacticNebula.pdb
+C:\Users\Tonman\Desktop\galactic_nebula\GalacticNebula\GalacticNebula\obj\Debug\GalacticNebula.csprojResolveAssemblyReference.cache
